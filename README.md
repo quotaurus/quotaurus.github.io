@@ -3,7 +3,8 @@
 Static product website for `quotaurus.com`.
 
 The site is for Quotaurus and the Quote Jira Cloud app. The homepage is based
-on the current Forge app behaviour:
+on current Forge app behaviour and is written as a public sales site for Jira
+Marketplace visitors:
 
 - Jira project page and issue panel
 - Quote creation from project pages and Jira tickets
@@ -37,6 +38,10 @@ Set up or confirm these email addresses:
 Review the privacy and cookie policy wording before using the site for a public
 Marketplace listing. The current copy is conservative and assumes the public
 website sets no tracking cookies.
+
+The homepage currently links to the Atlassian Marketplace search results for
+`Quotaurus`. Replace those links with the direct Marketplace listing URL once
+the app listing is available.
 
 ## GitHub Pages
 
