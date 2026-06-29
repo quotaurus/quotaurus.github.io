@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" role="img" aria-labelledby="title desc">
-  <title id="title">Quote app interface mockup</title>
+  <title id="title">Quotaurus interface mockup</title>
   <desc id="desc">A mock Jira issue page with a Quote panel showing status, client, value, and line items.</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">

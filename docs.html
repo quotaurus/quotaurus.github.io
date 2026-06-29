@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Quotaurus documentation for installation, first quote setup, Jira issue linking, PDFs, Mailgun, recurring quotes, statuses, and troubleshooting."
+    >
+    <title>Documentation | Quotaurus</title>
+    <link rel="icon" href="assets/quotaurus-logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Quotaurus home">
+        <img class="brand-logo" src="assets/quotaurus-logo.png" alt="Quotaurus">
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Product</a>
+        <a href="use-cases.html">Use cases</a>
+        <a href="index.html#product-tour">Tour</a>
+        <a href="pricing.html">Pricing</a>
+        <a aria-current="page" href="docs.html">Docs</a>
+        <a href="security.html">Security</a>
+        <a href="support.html">Support</a>
+        <a class="nav-cta" href="pricing.html#marketplace-access">Marketplace</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="docs-title">
+        <p class="eyebrow">Documentation</p>
+        <h1 id="docs-title">From install to first quote.</h1>
+        <p>
+          Short guides for Jira admins and delivery teams setting up Quotaurus
+          in Jira Cloud.
+        </p>
+        <nav class="doc-nav" aria-label="Documentation sections">
+          <a href="#installation">Installation</a>
+          <a href="#first-quote">First quote</a>
+          <a href="#issue-linking">Issue linking</a>
+          <a href="#pdfs">PDFs</a>
+          <a href="#mailgun">Mailgun</a>
+          <a href="#recurring">Recurring</a>
+          <a href="#statuses">Statuses</a>
+          <a href="#troubleshooting">Troubleshooting</a>
+        </nav>
+      </section>
+
+      <section class="policy-layout" aria-label="Documentation content">
+        <h2 id="installation">Installation</h2>
+        <ol class="step-list">
+          <li>Open the Quotaurus Atlassian Marketplace listing when available.</li>
+          <li>Select the Jira Cloud site where the app should be installed.</li>
+          <li>Review the requested permissions on the Atlassian install screen.</li>
+          <li>Open a Jira project and look for the project page named Quotes.</li>
+          <li>Open a Jira issue and look for the issue panel named Quotes.</li>
+        </ol>
+        <p>
+          Installation requires Jira Cloud admin permission. Contact Quotaurus if
+          you need the current Marketplace access route.
+        </p>
+
+        <h2 id="first-quote">Create your first quote</h2>
+        <ol class="step-list">
+          <li>Open a Jira issue or the project Quotes page.</li>
+          <li>Create a draft quote.</li>
+          <li>Add client details, title, currency, forecasted completion date, and notes.</li>
+          <li>Add line items with product, rate, quantity, and VAT setting.</li>
+          <li>Save the quote, then generate a PDF preview.</li>
+        </ol>
+
+        <h2 id="issue-linking">Link quotes to Jira issues</h2>
+        <p>
+          Quotaurus can link open quotes to Jira issues. Linked quotes are
+          visible from the issue panel and can be opened back in the project
+          Quotes page.
+        </p>
+
+        <h2 id="pdfs">Generate quote PDFs</h2>
+        <p>
+          Quote PDFs include quote reference and version, project title, quote
+          date, expiry text, prepared-by detail when available, client, PO
+          number, notes, line items, VAT, and totals.
+        </p>
+        <p>
+          PDF generation does not require Mailgun. Teams can download or share
+          a generated PDF according to their internal process.
+        </p>
+
+        <h2 id="mailgun">Configure Mailgun email sending</h2>
+        <p>
+          Quote email sending uses saved Mailgun project settings. The email
+          includes a short message, quote details, and the generated quote PDF as
+          an attachment. On successful send, Quotaurus stores recipient and
+          sent-date metadata on the quote.
+        </p>
+        <ul class="plain-list">
+          <li>Mailgun domain.</li>
+          <li>Mailgun region.</li>
+          <li>Mailgun API key.</li>
+          <li>From email and optional reply-to email.</li>
+        </ul>
+
+        <h2 id="recurring">Recurring quote templates</h2>
+        <p>
+          Recurring templates can generate monthly draft quotes. Templates store
+          client, title, currency, system, revenue stream, PO number, notes, VAT
+          setting, status, line items, and billing day. Schedules support days 1
+          to 28 and a last-day-of-month option.
+        </p>
+
+        <h2 id="statuses">Quote statuses</h2>
+        <p>
+          Quotaurus currently uses Draft, Sent, Accepted, Rejected, Invoiceable,
+          Closed, and Cancelled. A quote marked Invoiceable requires a PO number.
+        </p>
+
+        <h2 id="permissions">Permissions and roles</h2>
+        <p>
+          The current app manifest requests Forge app storage, read Jira work,
+          write Jira work, and read Jira user scopes. Quotaurus does not publish
+          a separate public role model on this site; teams should review
+          Atlassian's install permission screen and their Jira project access
+          model before rollout.
+        </p>
+
+        <h2 id="troubleshooting">Troubleshooting</h2>
+        <ul class="plain-list">
+          <li>If the Quotes page is not visible, confirm the app is installed on the correct Jira Cloud site.</li>
+          <li>If an issue panel does not show expected quotes, confirm the quote is open and linked to that issue.</li>
+          <li>If a PDF cannot be generated, include the quote reference and visible error in support email.</li>
+          <li>If email sending fails, check Mailgun domain, region, API key, and from email settings.</li>
+          <li>If a quote cannot be marked Invoiceable, check that a PO number has been added.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span class="footer-brand">Quotaurus</span>
+        <p>Quote workflows for Jira Cloud teams.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="pricing.html">Marketplace</a>
+        <a href="docs.html">Docs</a>
+        <a href="security.html">Security</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="cookie-policy.html">Cookies</a>
+      </nav>
+      <p class="trademark-note">
+        Jira and Atlassian are trademarks of Atlassian. Quotaurus is not
+        affiliated with Atlassian.
+      </p>
+    </footer>
+  </body>
+</html>

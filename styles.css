@@ -2,9 +2,9 @@
   color-scheme: light;
   --ink: #17201d;
   --muted: #5b6661;
-  --paper: #f7f3ea;
-  --paper-strong: #fffdf6;
-  --mist: #e9eee9;
+  --paper: #f6f8fb;
+  --paper-strong: #ffffff;
+  --mist: #e8f0ef;
   --line: rgba(23, 32, 29, 0.13);
   --forest: #173d38;
   --teal: #236c69;
@@ -60,7 +60,7 @@ img {
   gap: 1rem;
   border-bottom: 1px solid var(--line);
   padding: 0.45rem clamp(1rem, 4vw, 3rem);
-  background: rgba(255, 253, 246, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(14px);
 }
 
@@ -103,7 +103,7 @@ img {
 }
 
 .product-hero {
-  min-height: 68svh;
+  min-height: 72svh;
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(20rem, 0.9fr);
   align-items: center;
@@ -111,7 +111,7 @@ img {
   padding: clamp(2.75rem, 7vw, 5rem) clamp(1rem, 5vw, 5rem)
     clamp(2.25rem, 6vw, 4rem);
   background:
-    linear-gradient(120deg, rgba(23, 61, 56, 0.94), rgba(35, 108, 105, 0.78)),
+    linear-gradient(120deg, rgba(23, 61, 56, 0.96), rgba(49, 93, 146, 0.72)),
     var(--forest);
   color: var(--paper-strong);
   overflow: hidden;
@@ -158,7 +158,7 @@ h2 {
 
 h1 {
   max-width: 11em;
-  font-size: clamp(3.2rem, 6vw, 5.8rem);
+  font-size: clamp(3rem, 5.8vw, 5.5rem);
 }
 
 h2 {
@@ -208,6 +208,17 @@ h3 {
   background: rgba(255, 253, 246, 0.08);
 }
 
+.button-note,
+.small-note {
+  color: rgba(255, 253, 246, 0.78);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.button-note {
+  margin: 0.85rem 0 0;
+}
+
 .button.dark {
   color: var(--paper-strong);
   background: var(--forest);
@@ -231,6 +242,13 @@ h3 {
 
 .intro-band,
 .feature-grid,
+.product-tour,
+.use-case-band,
+.output-band,
+.comparison-band,
+.roi-band,
+.trust-band,
+.faq-section,
 .workflow-band,
 .marketplace-band,
 .page-hero,
@@ -249,12 +267,37 @@ h3 {
   border-bottom: 1px solid var(--line);
 }
 
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  border-bottom: 1px solid var(--line);
+  background: var(--line);
+}
+
+.trust-strip span {
+  min-height: 5.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: var(--forest);
+  background: var(--paper-strong);
+  font-weight: 820;
+  line-height: 1.35;
+  text-align: center;
+}
+
 .intro-band p:last-child,
 .marketplace-band p,
+.roi-band p,
 .page-hero p,
 .policy-layout p,
 .policy-layout li,
 .feature-card p,
+.tour-shot p,
+.use-case-grid p,
+.faq-grid p,
 .contact-card p,
 .support-card p,
 .site-footer p {
@@ -312,6 +355,209 @@ h3 {
   padding-block: clamp(3rem, 8vw, 6rem);
   color: var(--paper-strong);
   background: var(--forest);
+}
+
+.product-tour,
+.use-case-band,
+.output-band,
+.comparison-band,
+.trust-band,
+.faq-section {
+  padding-block: clamp(3rem, 8vw, 6rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.product-tour {
+  background: var(--paper-strong);
+}
+
+.tour-grid,
+.use-case-grid,
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.tour-shot,
+.use-case-grid article,
+.faq-grid article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.2rem;
+  background: var(--paper-strong);
+}
+
+.tour-shot {
+  min-height: 13rem;
+  background:
+    linear-gradient(180deg, rgba(49, 93, 146, 0.08), transparent 58%),
+    var(--paper-strong);
+}
+
+.tour-shot span,
+.mail-label {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  padding: 0.3rem 0.55rem;
+  color: var(--blue);
+  background: rgba(49, 93, 146, 0.1);
+  font-size: 0.78rem;
+  font-weight: 860;
+}
+
+.text-link {
+  display: inline-flex;
+  margin-top: 1.25rem;
+  color: var(--blue);
+  font-weight: 840;
+}
+
+.output-band {
+  background: var(--mist);
+}
+
+.output-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.75fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.sample-pdf,
+.sample-email {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.25rem;
+  background: var(--paper-strong);
+  box-shadow: 0 1rem 2.5rem rgba(24, 34, 30, 0.06);
+}
+
+.sample-pdf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--forest);
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.sample-pdf-header img {
+  width: auto;
+  height: 3.4rem;
+}
+
+.sample-pdf dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 1.25rem 0;
+}
+
+.sample-pdf dl div {
+  border-left: 3px solid var(--amber);
+  padding-left: 0.7rem;
+}
+
+.sample-pdf dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.sample-pdf dd {
+  margin: 0.2rem 0 0;
+  font-weight: 820;
+}
+
+.sample-pdf table,
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sample-pdf th,
+.sample-pdf td,
+.comparison-table th,
+.comparison-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 0.8rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.sample-pdf th,
+.comparison-table th {
+  color: var(--paper-strong);
+  background: var(--forest);
+}
+
+.sample-pdf th:not(:first-child),
+.sample-pdf td:not(:first-child) {
+  text-align: right;
+}
+
+.sample-pdf p {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin: 0.65rem 0 0;
+}
+
+.sample-pdf p span {
+  min-width: 7rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+.sample-total {
+  color: var(--forest);
+  font-size: 1.15rem;
+}
+
+.sample-email .small-note {
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper-strong);
+}
+
+.comparison-table th,
+.comparison-table td {
+  min-width: 13rem;
+}
+
+.roi-band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(18rem, 1fr);
+  gap: clamp(1.25rem, 4vw, 4rem);
+  align-items: center;
+  padding-block: clamp(3rem, 8vw, 6rem);
+  color: var(--paper-strong);
+  background:
+    linear-gradient(120deg, rgba(49, 93, 146, 0.94), rgba(23, 61, 56, 0.9)),
+    var(--blue);
+}
+
+.roi-band .section-kicker {
+  color: #f1b96f;
+}
+
+.roi-band p {
+  color: rgba(255, 253, 246, 0.84);
+  margin: 0;
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+}
+
+.faq-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .workflow-band .section-kicker {
@@ -377,9 +623,9 @@ h3 {
 }
 
 .page-hero h1 {
-  max-width: 13ch;
+  max-width: 16ch;
   color: var(--forest);
-  font-size: clamp(3rem, 7vw, 6.4rem);
+  font-size: clamp(2.7rem, 6vw, 5.6rem);
 }
 
 .page-hero p {
@@ -401,6 +647,14 @@ h3 {
   padding: 1.25rem;
 }
 
+.content-grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.content-grid .wide {
+  grid-column: span 2;
+}
+
 .contact-card.full,
 .support-card.full,
 .policy-card.full {
@@ -414,12 +668,20 @@ h3 {
 }
 
 .contact-list,
-.plain-list {
+.plain-list,
+.step-list {
   display: grid;
   gap: 0.75rem;
   margin: 1rem 0 0;
   padding: 0;
+}
+
+.plain-list {
   list-style: none;
+}
+
+.step-list {
+  padding-left: 1.4rem;
 }
 
 .contact-list a {
@@ -429,7 +691,8 @@ h3 {
   font-weight: 800;
 }
 
-.plain-list li {
+.plain-list li,
+.step-list li {
   padding-left: 1rem;
   border-left: 3px solid var(--amber);
   color: var(--muted);
@@ -452,6 +715,22 @@ h3 {
 
 .policy-layout a {
   color: var(--blue);
+  font-weight: 760;
+}
+
+.doc-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.doc-nav a {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 0.45rem 0.65rem;
+  color: var(--forest);
+  background: var(--paper-strong);
   font-weight: 760;
 }
 
@@ -482,14 +761,24 @@ h3 {
 @media (max-width: 920px) {
   .product-hero,
   .intro-band,
+  .output-grid,
+  .roi-band,
   .marketplace-band,
   .content-grid {
     grid-template-columns: 1fr;
   }
 
   .feature-grid,
-  .workflow-list {
+  .workflow-list,
+  .tour-grid,
+  .use-case-grid,
+  .trust-strip,
+  .content-grid.three {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .content-grid .wide {
+    grid-column: 1 / -1;
   }
 }
 
@@ -545,7 +834,16 @@ h3 {
   }
 
   .feature-grid,
-  .workflow-list {
+  .workflow-list,
+  .tour-grid,
+  .use-case-grid,
+  .faq-grid,
+  .trust-strip,
+  .sample-pdf dl {
     grid-template-columns: 1fr;
+  }
+
+  .sample-pdf {
+    overflow-x: auto;
   }
 }

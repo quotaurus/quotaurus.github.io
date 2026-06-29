@@ -5,12 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Quotaurus is a Jira Cloud quote app for creating priced quotes from Jira work, linking them to issues, generating PDFs, sending quote emails, and tracking quote status."
+      content="Quotaurus is quote management for Jira Cloud: create priced quotes from Jira issues, generate PDFs, send quote emails, track status, and manage recurring quote drafts inside Jira."
     >
-    <title>Quotaurus | Quote App for Jira</title>
+    <title>Quotaurus - Quote Management for Jira Cloud</title>
     <link rel="icon" href="assets/quotaurus-logo.png" type="image/png">
     <link rel="preload" as="image" href="assets/quote-app-mockup.svg">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Quotaurus",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Jira Cloud",
+        "description": "Create priced quotes from Jira issues, generate PDFs, send quote emails when configured, track quote status, and manage recurring monthly quote drafts inside Jira Cloud.",
+        "url": "https://quotaurus.com/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Quotaurus",
+          "url": "https://quotaurus.com/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/OnlineOnly",
+          "url": "https://quotaurus.com/pricing.html"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Quotaurus for Jira Cloud?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Quotaurus is built for Jira Cloud and runs inside Jira project pages and issue panels."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I generate a PDF without sending an email?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Quotaurus can generate quote PDFs separately from configured email sending."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does quote email require Mailgun?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Quote email sending uses saved Mailgun project settings. Teams can still generate PDFs without configuring Mailgun."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header" aria-label="Main navigation">
@@ -19,41 +72,35 @@
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a aria-current="page" href="index.html">Product</a>
+        <a href="use-cases.html">Use cases</a>
+        <a href="index.html#product-tour">Tour</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="docs.html">Docs</a>
+        <a href="security.html">Security</a>
         <a href="support.html">Support</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy-policy.html">Privacy</a>
-        <a href="cookie-policy.html">Cookies</a>
-        <a
-          class="nav-cta"
-          href="https://marketplace.atlassian.com/search?query=Quotaurus"
-          target="_blank"
-          rel="noopener"
-        >Install</a>
+        <a class="nav-cta" href="pricing.html#marketplace-access">Marketplace</a>
       </nav>
     </header>
 
     <main>
       <section class="product-hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Quote app for Jira Cloud</p>
-          <h1 id="hero-title">Quote from the work already in Jira.</h1>
+          <p class="eyebrow">Quote management for Jira Cloud</p>
+          <h1 id="hero-title">Turn Jira issues into client-ready quotes without spreadsheets.</h1>
           <p class="hero-text">
-            Quotaurus gives teams a Jira-native way to build priced quotes,
-            connect them to issues, generate PDFs, send quote emails when
-            configured, and keep quote status history close to delivery work.
+            Quotaurus keeps scope, pricing, PDFs, quote emails, status history,
+            and recurring monthly quote work inside Jira Cloud, so delivery and
+            commercial context stay together.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a
-              class="button primary"
-              href="https://marketplace.atlassian.com/search?query=Quotaurus"
-              target="_blank"
-              rel="noopener"
-            >Install from Marketplace</a>
-            <a class="button secondary" href="contact.html">Ask a question</a>
+            <a class="button primary" href="pricing.html#marketplace-access">Get Marketplace access</a>
+            <a class="button secondary" href="#product-tour">See product tour</a>
+            <a class="button secondary" href="#sample-output">See sample output</a>
           </div>
+          <p class="button-note">Requires Jira Cloud admin permission to install.</p>
         </div>
 
-        <div class="hero-visual" aria-label="Quote app interface preview">
+        <div class="hero-visual" aria-label="Quotaurus interface preview">
           <img
             src="assets/quote-app-mockup.svg"
             alt="Mock interface showing a Jira issue with a Quote panel, draft status, client, value, and line items."
@@ -61,70 +108,74 @@
         </div>
       </section>
 
+      <section class="trust-strip" aria-label="Trust highlights">
+        <span>Built for Jira Cloud</span>
+        <span>Runs inside Jira project and issue views</span>
+        <span>No advertising or analytics cookies on this site</span>
+        <span>Email support from Quotaurus</span>
+      </section>
+
       <section class="intro-band" aria-labelledby="problem-title">
         <div>
-          <p class="section-kicker">Why teams use it</p>
-          <h2 id="problem-title">Commercial context stays with delivery context.</h2>
+          <p class="section-kicker">The problem</p>
+          <h2 id="problem-title">Stop losing quote details in spreadsheets, emails, and disconnected PDF drafts.</h2>
         </div>
         <p>
-          When quote details live separately from Jira, teams lose the link
-          between scope, price, client details, sent documents, and recurring
-          monthly work. Quotaurus keeps the quote record beside the project and
-          issues it belongs to.
+          Jira already holds the work. Quotaurus adds the commercial layer:
+          client details, products, rates, VAT, currency, PO numbers, forecast
+          dates, sent documents, and quote status, all tied back to the Jira
+          issues that created the need.
         </p>
       </section>
 
-      <section class="feature-grid" aria-labelledby="features-title">
+      <section class="feature-grid" aria-labelledby="story-title">
         <div class="section-heading">
-          <p class="section-kicker">Benefits</p>
-          <h2 id="features-title">Everything needed to quote from Jira work.</h2>
+          <p class="section-kicker">How it works</p>
+          <h2 id="story-title">Create, price, send, and track client quotes without leaving Jira.</h2>
         </div>
 
         <article class="feature-card">
           <span class="feature-number">01</span>
-          <h3>Create quotes from Jira issues</h3>
+          <h3>Start with a Jira issue</h3>
           <p>
-            Start a quote from the issue panel or project Quotes page, so
-            pricing begins from the ticket context your team already has.
+            Create a quote from the issue panel or from the project Quotes page,
+            so the commercial record starts beside the delivery scope.
           </p>
         </article>
 
         <article class="feature-card">
           <span class="feature-number">02</span>
-          <h3>Keep quotes tied to scope</h3>
+          <h3>Price the scope</h3>
           <p>
-            Link open quotes to Jira issues, see linked quote references from
-            the issue panel, and jump back to the full quote in the project page.
+            Add client, product, rate, quantity, VAT, currency, PO, system,
+            revenue stream, notes, and forecast completion details.
           </p>
         </article>
 
         <article class="feature-card">
           <span class="feature-number">03</span>
-          <h3>Build structured pricing</h3>
+          <h3>Attach quotes to delivery work</h3>
           <p>
-            Capture clients, products, rates, quantities, VAT, currency,
-            revenue streams, systems, PO numbers, and forecast dates without
-            leaving Jira.
+            Link open quotes to Jira issues, see the quote references from the
+            issue panel, and open the full quote from the project page.
           </p>
         </article>
 
         <article class="feature-card">
           <span class="feature-number">04</span>
-          <h3>Send polished quote PDFs</h3>
+          <h3>Send a professional PDF</h3>
           <p>
-            Preview a generated PDF and send it by email when Mailgun is
-            configured, with recipient and sent-date details stored on the
-            quote.
+            Preview the generated PDF and send it by email when Mailgun is
+            configured, with recipient and sent-date metadata stored on the quote.
           </p>
         </article>
 
         <article class="feature-card">
           <span class="feature-number">05</span>
-          <h3>Track quote progress</h3>
+          <h3>Track the commercial lifecycle</h3>
           <p>
-            Use Draft, Sent, Accepted, Rejected, Invoiceable, Closed, and
-            Cancelled statuses, with version history available for quote
-            updates.
+            Move quotes through Draft, Sent, Accepted, Rejected, Invoiceable,
+            Closed, and Cancelled, with version history kept for updates.
           </p>
         </article>
 
@@ -132,78 +183,268 @@
           <span class="feature-number">06</span>
           <h3>Repeat monthly quote work</h3>
           <p>
-            Set up recurring quote templates that create monthly drafts on the
-            selected billing day, including last-day-of-month schedules.
+            Auto-create monthly quote drafts from recurring templates for
+            retainers, support packages, and scheduled service work.
           </p>
         </article>
       </section>
 
-      <section class="workflow-band" aria-labelledby="workflow-title">
+      <section class="product-tour" id="product-tour" aria-labelledby="tour-title">
         <div class="section-heading">
-          <p class="section-kicker">How it fits</p>
-          <h2 id="workflow-title">From Jira ticket to quote record.</h2>
+          <p class="section-kicker">Product tour</p>
+          <h2 id="tour-title">The quoting workflow stays visible where work happens.</h2>
         </div>
-        <ol class="workflow-list">
-          <li>
-            <span>Create</span>
-            Start from a ticket or the project Quotes page.
-          </li>
-          <li>
-            <span>Price</span>
-            Add client, product, VAT, currency, PO, and forecast detail.
-          </li>
-          <li>
-            <span>Link</span>
-            Attach open quotes to the Jira issues they cover.
-          </li>
-          <li>
-            <span>Send</span>
-            Generate a PDF and send email when Mailgun is configured.
-          </li>
-          <li>
-            <span>Track</span>
-            Follow status, sent metadata, linked tickets, and versions.
-          </li>
-          <li>
-            <span>Repeat</span>
-            Create monthly drafts from recurring templates.
-          </li>
-        </ol>
+        <div class="tour-grid">
+          <article class="tour-shot">
+            <span>Issue panel</span>
+            <h3>Keep quote value beside the ticket.</h3>
+            <p>Linked quotes stay visible from the Jira issue that created the work.</p>
+          </article>
+          <article class="tour-shot">
+            <span>Project Quotes page</span>
+            <h3>Manage draft, sent, and accepted quotes.</h3>
+            <p>Use the project view to create, edit, filter, and reopen quote records.</p>
+          </article>
+          <article class="tour-shot">
+            <span>Quote editor</span>
+            <h3>Build line-item pricing with real fields.</h3>
+            <p>Capture products, rates, VAT, currency, PO, notes, and forecast dates.</p>
+          </article>
+          <article class="tour-shot">
+            <span>PDF preview</span>
+            <h3>Review the client-facing output first.</h3>
+            <p>Generate a PDF quote before sending it or sharing it manually.</p>
+          </article>
+          <article class="tour-shot">
+            <span>Status history</span>
+            <h3>See what changed as quotes move forward.</h3>
+            <p>Track quote status and keep version history for later reference.</p>
+          </article>
+          <article class="tour-shot">
+            <span>Recurring templates</span>
+            <h3>Prepare monthly quote drafts automatically.</h3>
+            <p>Use billing-day templates, including last-day-of-month schedules.</p>
+          </article>
+        </div>
       </section>
 
-      <section class="marketplace-band" aria-labelledby="marketplace-title">
+      <section class="use-case-band" id="use-cases" aria-labelledby="use-cases-title">
+        <div class="section-heading">
+          <p class="section-kicker">Who it is for</p>
+          <h2 id="use-cases-title">Built for teams that quote work already tracked in Jira.</h2>
+        </div>
+        <div class="use-case-grid">
+          <article>
+            <h3>Digital agencies</h3>
+            <p>Quote new scope, change requests, and client project work from delivery tickets.</p>
+          </article>
+          <article>
+            <h3>IT service teams and MSPs</h3>
+            <p>Handle one-off requests and recurring monthly service packages from Jira.</p>
+          </article>
+          <article>
+            <h3>Professional services teams</h3>
+            <p>Keep pricing, PO numbers, forecast dates, and delivery scope in one place.</p>
+          </article>
+          <article>
+            <h3>Jira admins</h3>
+            <p>Add a lightweight quoting workflow without introducing a separate CPQ system.</p>
+          </article>
+        </div>
+        <a class="text-link" href="use-cases.html">Explore use cases</a>
+      </section>
+
+      <section class="output-band" id="sample-output" aria-labelledby="output-title">
+        <div class="section-heading">
+          <p class="section-kicker">Sample output</p>
+          <h2 id="output-title">Show clients a clear PDF and keep the record in Jira.</h2>
+        </div>
+        <div class="output-grid">
+          <article class="sample-pdf" aria-label="Sample quote PDF structure">
+            <div class="sample-pdf-header">
+              <img src="assets/quotaurus-logo.png" alt="">
+              <span>QUOTE</span>
+            </div>
+            <dl>
+              <div><dt>Quote Ref.</dt><dd>Q2600042 v2</dd></div>
+              <div><dt>Project</dt><dd>Website support retainer</dd></div>
+              <div><dt>Client</dt><dd>Acme Services</dd></div>
+              <div><dt>PO number</dt><dd>PO-1048</dd></div>
+            </dl>
+            <table>
+              <thead>
+                <tr><th>Product</th><th>Rate</th><th>Qty</th><th>Total</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Support package</td><td>GBP 750.00</td><td>1</td><td>GBP 750.00</td></tr>
+                <tr><td>Implementation work</td><td>GBP 95.00</td><td>8</td><td>GBP 760.00</td></tr>
+              </tbody>
+            </table>
+            <p><span>Subtotal</span><strong>GBP 1,510.00</strong></p>
+            <p><span>VAT</span><strong>GBP 302.00</strong></p>
+            <p class="sample-total"><span>Total</span><strong>GBP 1,812.00</strong></p>
+          </article>
+
+          <article class="sample-email" aria-label="Sample quote email structure">
+            <span class="mail-label">Email preview</span>
+            <h3>Q2600042: Website support retainer</h3>
+            <p>Hi Sam,</p>
+            <p>Please find attached your quote PDF. The key details are below.</p>
+            <ul class="plain-list">
+              <li>Forecasted completion date included.</li>
+              <li>PDF attached to the email.</li>
+              <li>Recipient and sent date stored on the quote after successful send.</li>
+            </ul>
+            <p class="small-note">
+              Email sending uses your saved Mailgun project settings. PDF
+              generation does not require Mailgun.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="comparison-band" aria-labelledby="comparison-title">
+        <div class="section-heading">
+          <p class="section-kicker">Positioning</p>
+          <h2 id="comparison-title">Why use Quotaurus instead of another quoting workaround?</h2>
+        </div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Alternative</th>
+                <th>Common problem</th>
+                <th>Quotaurus positioning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Spreadsheets</td>
+                <td>Pricing gets separated from Jira scope.</td>
+                <td>Quotes stay tied to Jira issues and project context.</td>
+              </tr>
+              <tr>
+                <td>Generic CPQ</td>
+                <td>Too heavy for delivery teams that live in Jira.</td>
+                <td>Lightweight quoting inside Jira Cloud views.</td>
+              </tr>
+              <tr>
+                <td>Manual PDFs</td>
+                <td>Versions, status, and sent records are hard to track.</td>
+                <td>Quote status and version history stay on the quote record.</td>
+              </tr>
+              <tr>
+                <td>Separate quoting tools</td>
+                <td>Commercial context leaves the delivery workflow.</td>
+                <td>Quote records sit beside the Jira work they cover.</td>
+              </tr>
+              <tr>
+                <td>Broader Jira finance suites</td>
+                <td>Teams may not need a full billing or invoice platform.</td>
+                <td>Focused on scope-linked quoting and recurring monthly drafts.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="roi-band" aria-labelledby="roi-title">
         <div>
-          <p class="section-kicker">Install</p>
-          <h2 id="marketplace-title">Add Quotaurus from Atlassian Marketplace.</h2>
-          <p>
-            Install the app in Jira Cloud, review the support and policy
-            details, or contact Quotaurus if your team needs help before rollout.
-          </p>
+          <p class="section-kicker">ROI</p>
+          <h2 id="roi-title">What does spreadsheet quoting cost your team?</h2>
+        </div>
+        <p>
+          If a team creates 40 quotes per month and spends 20 minutes on each
+          quote chasing scope, copying line items, formatting PDFs, and updating
+          status, that is over 13 hours per month of quote admin. Quotaurus is
+          designed to reduce those handoffs by keeping the quote workflow inside
+          Jira.
+        </p>
+      </section>
+
+      <section class="trust-band" aria-labelledby="trust-title">
+        <div class="section-heading">
+          <p class="section-kicker">Admin confidence</p>
+          <h2 id="trust-title">Clear data, permissions, and support information before install.</h2>
         </div>
         <div class="link-cards">
-          <a
-            href="https://marketplace.atlassian.com/search?query=Quotaurus"
-            target="_blank"
-            rel="noopener"
-          >
-            <span>Atlassian Marketplace</span>
-            Find Quotaurus on Atlassian Marketplace and install it into Jira Cloud.
+          <a href="security.html">
+            <span>Security & Trust</span>
+            Review Forge storage, Jira scopes, Mailgun data flow, and security contact details.
           </a>
-          <a href="contact.html">
-            <span>Contact</span>
-            Ask a pre-install question or request details for your team.
-          </a>
-          <a href="support.html">
-            <span>Support</span>
-            Get help with installation, configuration, or app usage.
+          <a href="docs.html">
+            <span>Documentation</span>
+            Read installation, first quote, PDF, Mailgun, recurring quote, and troubleshooting guides.
           </a>
           <a href="privacy-policy.html">
             <span>Privacy policy</span>
-            How the app and website handle information.
+            See what app and website information may be processed.
           </a>
-          <a href="cookie-policy.html">
-            <span>Cookie policy</span>
-            Current cookie use for the public website.
+        </div>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="section-kicker">FAQ</p>
+          <h2 id="faq-title">Answers before a Jira admin installs the app.</h2>
+        </div>
+        <div class="faq-grid">
+          <article>
+            <h3>Is Quotaurus for Jira Cloud only?</h3>
+            <p>Yes. The app is built for Jira Cloud and runs in Jira project and issue views.</p>
+          </article>
+          <article>
+            <h3>Can I create a quote from a Jira issue?</h3>
+            <p>Yes. Quotaurus supports quote creation from the Jira issue panel.</p>
+          </article>
+          <article>
+            <h3>Can one quote link to multiple Jira issues?</h3>
+            <p>Yes. Open quotes can be linked to Jira issues and referenced from issue panels.</p>
+          </article>
+          <article>
+            <h3>Can I generate a PDF without sending an email?</h3>
+            <p>Yes. PDF generation is separate from Mailgun email sending.</p>
+          </article>
+          <article>
+            <h3>Does email sending require Mailgun?</h3>
+            <p>Yes. Sending quote emails uses saved Mailgun project settings.</p>
+          </article>
+          <article>
+            <h3>Does Quotaurus support VAT and multiple currencies?</h3>
+            <p>The quote editor supports VAT toggling and currency selection for line-item totals.</p>
+          </article>
+          <article>
+            <h3>Can I create recurring monthly quotes?</h3>
+            <p>Yes. Recurring templates can generate monthly draft quotes on a selected billing day.</p>
+          </article>
+          <article>
+            <h3>How do I get support?</h3>
+            <p>Email support with your Atlassian site URL, project or issue, steps, and screenshots.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="marketplace-band final-cta" aria-labelledby="marketplace-title">
+        <div>
+          <p class="section-kicker">Next step</p>
+          <h2 id="marketplace-title">Bring quote management into Jira Cloud.</h2>
+          <p>
+            Review pricing and Marketplace access, read the first-quote guide,
+            or contact Quotaurus before rollout.
+          </p>
+        </div>
+        <div class="link-cards">
+          <a href="pricing.html#marketplace-access">
+            <span>Marketplace access</span>
+            Get the current install and pricing route for Jira Cloud.
+          </a>
+          <a href="docs.html#first-quote">
+            <span>First quote guide</span>
+            See the steps from install to creating a first quote.
+          </a>
+          <a href="contact.html">
+            <span>Ask a question</span>
+            Contact Quotaurus about fit, rollout, support, or Marketplace details.
           </a>
         </div>
       </section>
@@ -215,6 +456,10 @@
         <p>Quote workflows for Jira Cloud teams.</p>
       </div>
       <nav aria-label="Footer navigation">
+        <a href="pricing.html">Marketplace</a>
+        <a href="docs.html">Docs</a>
+        <a href="security.html">Security</a>
+        <a href="changelog.html">Changelog</a>
         <a href="support.html">Support</a>
         <a href="contact.html">Contact</a>
         <a href="privacy-policy.html">Privacy</a>

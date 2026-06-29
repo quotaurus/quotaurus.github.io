@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Security and trust information for Quotaurus, including Forge storage, Jira scopes, data handling, Mailgun email sending, and support contacts."
+    >
+    <title>Security & Trust | Quotaurus</title>
+    <link rel="icon" href="assets/quotaurus-logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Quotaurus home">
+        <img class="brand-logo" src="assets/quotaurus-logo.png" alt="Quotaurus">
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Product</a>
+        <a href="use-cases.html">Use cases</a>
+        <a href="index.html#product-tour">Tour</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="docs.html">Docs</a>
+        <a aria-current="page" href="security.html">Security</a>
+        <a href="support.html">Support</a>
+        <a class="nav-cta" href="pricing.html#marketplace-access">Marketplace</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="security-title">
+        <p class="eyebrow">Security & Trust</p>
+        <h1 id="security-title">Know what the app stores and where data flows.</h1>
+        <p>
+          Quotaurus handles commercial quote data, so the site documents the
+          current data model, Jira scopes, external email dependency, and support
+          contacts before installation.
+        </p>
+      </section>
+
+      <section class="content-grid three" aria-label="Security summary">
+        <article class="support-card">
+          <h2>App hosting</h2>
+          <p>
+            Quotaurus is built as an Atlassian Forge app for Jira Cloud. The app
+            exposes a Jira project page named Quotes and a Jira issue panel named
+            Quotes.
+          </p>
+        </article>
+
+        <article class="support-card">
+          <h2>App storage</h2>
+          <p>
+            Quote records, clients, metadata, recurring templates, history, and
+            settings are stored through Atlassian Forge app storage APIs used by
+            the app.
+          </p>
+        </article>
+
+        <article class="support-card">
+          <h2>Website cookies</h2>
+          <p>
+            The public website does not currently set analytics cookies,
+            advertising cookies, account registration cookies, or contact-form
+            cookies.
+          </p>
+        </article>
+
+        <article class="support-card wide">
+          <h2>Requested Jira scopes</h2>
+          <ul class="plain-list">
+            <li><code>storage:app</code> for app data storage.</li>
+            <li><code>read:jira-work</code> to read Jira work context.</li>
+            <li><code>write:jira-work</code> to support Jira work interactions used by the app.</li>
+            <li><code>read:jira-user</code> to read Jira user details where needed, such as prepared-by information.</li>
+          </ul>
+        </article>
+
+        <article class="support-card">
+          <h2>External email flow</h2>
+          <p>
+            Quote email sending uses Mailgun when configured. The quote email
+            flow sends recipient details, email content, and the generated quote
+            PDF to the configured Mailgun endpoint.
+          </p>
+        </article>
+      </section>
+
+      <section class="policy-layout" aria-label="Security details">
+        <h2>Quote data processed by the app</h2>
+        <p>
+          Quotaurus may process client names, recipient names and emails, quote
+          titles, quote values, products, rates, quantities, VAT settings,
+          currency, PO numbers, systems, revenue streams, notes, forecasted
+          completion dates, linked Jira issue keys, generated PDF content,
+          quote status, version history, recurring templates, and sent-email
+          metadata.
+        </p>
+
+        <h2>Data outside Atlassian</h2>
+        <p>
+          The core quote workflow is stored through Forge app storage. When
+          Mailgun sending is configured and a user sends a quote email, quote
+          email content and the PDF attachment are sent to Mailgun for delivery.
+          Support emails sent to Quotaurus are processed by the email provider
+          used for the relevant support mailbox.
+        </p>
+
+        <h2>Data retention and deletion</h2>
+        <p>
+          The public site does not publish an automated retention schedule.
+          Contact Quotaurus for access, correction, deletion, or uninstall data
+          questions. Include the Atlassian site URL and enough detail to locate
+          the relevant records.
+        </p>
+
+        <h2>Backups and incident response</h2>
+        <p>
+          Backup, disaster recovery, and incident response details should be
+          confirmed during procurement or Marketplace security review. Security
+          reports can be sent to
+          <a href="mailto:support@quotaurus.com?subject=Security%20issue%20for%20Quotaurus">support@quotaurus.com</a>.
+        </p>
+
+        <h2>Subprocessors</h2>
+        <p>
+          Atlassian provides the Jira Cloud and Forge platform used by the app.
+          Mailgun is involved only when quote email sending is configured and
+          used. Additional support-mailbox providers may process support
+          messages sent by email.
+        </p>
+
+        <h2>Security contact</h2>
+        <p>
+          For vulnerability reports, email
+          <a href="mailto:support@quotaurus.com?subject=Security%20issue%20for%20Quotaurus">support@quotaurus.com</a>
+          with a clear subject line. Avoid public disclosure until the issue has
+          been reviewed.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span class="footer-brand">Quotaurus</span>
+        <p>Quote workflows for Jira Cloud teams.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="pricing.html">Marketplace</a>
+        <a href="docs.html">Docs</a>
+        <a href="security.html">Security</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="cookie-policy.html">Cookies</a>
+      </nav>
+      <p class="trademark-note">
+        Jira and Atlassian are trademarks of Atlassian. Quotaurus is not
+        affiliated with Atlassian.
+      </p>
+    </footer>
+  </body>
+</html>

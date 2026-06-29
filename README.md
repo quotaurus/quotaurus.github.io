@@ -39,9 +39,22 @@ Review the privacy and cookie policy wording before using the site for a public
 Marketplace listing. The current copy is conservative and assumes the public
 website sets no tracking cookies.
 
-The homepage currently links to the Atlassian Marketplace search results for
-`Quotaurus`. Replace those links with the direct Marketplace listing URL once
-the app listing is available.
+The public CTA currently links to the local Marketplace access page because a
+direct public Atlassian Marketplace listing URL is not published in this repo.
+Replace those links with the direct Marketplace listing URL once the app listing
+is available.
+
+## Site Pages
+
+- `index.html` - product homepage
+- `use-cases.html` - buyer use cases
+- `pricing.html` - Marketplace access and pricing explainer
+- `docs.html` - installation and workflow documentation
+- `security.html` - Security & Trust information
+- `support.html` - support and severity guide
+- `contact.html` - contact routes
+- `privacy-policy.html` and `cookie-policy.html`
+- `changelog.html` - public changelog and roadmap notes
 
 ## GitHub Pages
 
