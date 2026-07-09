@@ -832,6 +832,208 @@ h3 {
   font-weight: 760;
 }
 
+.docs-hero h1 {
+  max-width: 18ch;
+}
+
+.wiki-shell {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.26fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 4vw, 3rem);
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 5rem)
+    clamp(3rem, 7vw, 5rem);
+}
+
+.wiki-sidebar {
+  align-self: start;
+  position: sticky;
+  top: 6rem;
+}
+
+.wiki-sidebar-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem;
+  background: var(--paper-strong);
+  box-shadow: 0 1rem 2.5rem rgba(24, 34, 30, 0.06);
+}
+
+.wiki-label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--forest);
+  font-size: 0.78rem;
+  font-weight: 860;
+  text-transform: uppercase;
+}
+
+.wiki-nav {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.wiki-nav a {
+  border-radius: 6px;
+  padding: 0.48rem 0.55rem;
+  color: var(--muted);
+  font-weight: 760;
+  line-height: 1.35;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.wiki-nav a:hover,
+.wiki-nav a:focus-visible {
+  color: var(--forest);
+  background: rgba(35, 108, 105, 0.09);
+  transform: translateX(0.18rem);
+}
+
+.wiki-content {
+  display: grid;
+  gap: clamp(1.2rem, 3vw, 2rem);
+  min-width: 0;
+}
+
+.wiki-section {
+  scroll-margin-top: 7rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  background: var(--paper-strong);
+  box-shadow: 0 1rem 2.5rem rgba(24, 34, 30, 0.06);
+}
+
+.wiki-section h2 {
+  max-width: 18ch;
+  font-size: clamp(1.8rem, 3.7vw, 3.4rem);
+}
+
+.wiki-section h3 {
+  color: var(--forest);
+}
+
+.wiki-section p,
+.wiki-section li,
+.wiki-section dd {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.wiki-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+
+.wiki-card,
+.wiki-article,
+.wiki-glossary div {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+}
+
+.wiki-card {
+  display: block;
+  padding: 1rem;
+  color: var(--muted);
+  line-height: 1.55;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.wiki-card span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--ink);
+  font-weight: 860;
+}
+
+.wiki-card:hover,
+.wiki-card:focus-visible {
+  border-color: rgba(35, 108, 105, 0.32);
+  box-shadow: 0 1rem 2.25rem rgba(24, 34, 30, 0.1);
+  transform: translateY(-0.2rem);
+}
+
+.wiki-article {
+  scroll-margin-top: 7rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.anchor-target {
+  display: block;
+  scroll-margin-top: 7rem;
+}
+
+.wiki-article:first-of-type {
+  margin-top: 1.25rem;
+}
+
+.wiki-article p:last-child,
+.wiki-article .step-list:last-child,
+.wiki-article .plain-list:last-child {
+  margin-bottom: 0;
+}
+
+.wiki-table-wrap {
+  overflow-x: auto;
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.wiki-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wiki-table th,
+.wiki-table td {
+  min-width: 13rem;
+  border-bottom: 1px solid var(--line);
+  padding: 0.85rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.wiki-table th {
+  color: var(--paper-strong);
+  background: var(--forest);
+}
+
+.wiki-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.wiki-glossary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 1.25rem 0 0;
+}
+
+.wiki-glossary div {
+  padding: 1rem;
+}
+
+.wiki-glossary dt {
+  margin-bottom: 0.35rem;
+  color: var(--forest);
+  font-weight: 860;
+}
+
+.wiki-glossary dd {
+  margin: 0;
+}
+
 .site-footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -946,6 +1148,11 @@ h3 {
   .motion-ready .marketplace-band > *,
   .motion-ready .content-grid > article,
   .motion-ready .policy-layout > *,
+  .motion-ready .wiki-sidebar-panel,
+  .motion-ready .wiki-section,
+  .motion-ready .wiki-card,
+  .motion-ready .wiki-article,
+  .motion-ready .wiki-glossary div,
   .motion-ready .doc-nav a {
     opacity: 0;
     transform: translateY(1.1rem);
@@ -972,6 +1179,11 @@ h3 {
   .motion-ready .marketplace-band > *.is-visible,
   .motion-ready .content-grid > article.is-visible,
   .motion-ready .policy-layout > *.is-visible,
+  .motion-ready .wiki-sidebar-panel.is-visible,
+  .motion-ready .wiki-section.is-visible,
+  .motion-ready .wiki-card.is-visible,
+  .motion-ready .wiki-article.is-visible,
+  .motion-ready .wiki-glossary div.is-visible,
   .motion-ready .doc-nav a.is-visible {
     opacity: 1;
     transform: translateY(0);
@@ -995,6 +1207,7 @@ h3 {
   .output-grid,
   .roi-band,
   .marketplace-band,
+  .wiki-shell,
   .content-grid {
     grid-template-columns: 1fr;
   }
@@ -1011,6 +1224,14 @@ h3 {
 
   .content-grid .wide {
     grid-column: 1 / -1;
+  }
+
+  .wiki-sidebar {
+    position: static;
+  }
+
+  .wiki-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1071,6 +1292,8 @@ h3 {
   .visual-grid,
   .use-case-grid,
   .faq-grid,
+  .wiki-card-grid,
+  .wiki-glossary,
   .trust-strip,
   .sample-pdf dl {
     grid-template-columns: 1fr;

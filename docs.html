@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="RevFlow documentation for setup wizard, Jira field mappings, quote-to-issue linking, reports, PDFs, Mailgun, SendGrid, recurring quotes, permissions, dark mode, and troubleshooting."
+      content="RevFlow wiki and how-to guides for setup, Jira field mappings, quote workflows, reporting, PDFs, Mailgun, SendGrid, recurring quotes, permissions, dark mode, and troubleshooting."
     >
-    <title>Documentation | RevFlow by Quotaurus</title>
+    <title>Wiki & Documentation | RevFlow by Quotaurus</title>
     <link rel="icon" href="assets/quotaurus-logo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <script src="animations.js" defer></script>
@@ -30,162 +30,427 @@
     </header>
 
     <main>
-      <section class="page-hero" aria-labelledby="docs-title">
-        <p class="eyebrow">Documentation</p>
-        <h1 id="docs-title">Set up RevFlow for your Jira workflow.</h1>
+      <section class="page-hero docs-hero" aria-labelledby="docs-title">
+        <p class="eyebrow">RevFlow Wiki</p>
+        <h1 id="docs-title">Documentation and how-to guides.</h1>
         <p>
-          Short guides for Jira admins and delivery teams configuring RevFlow,
-          the Jira app from Quotaurus for quote-to-delivery revenue control.
+          A public wiki-style help centre for RevFlow because the app does not
+          currently rely on a separate Confluence space. Use this page for admin
+          setup, quote workflows, reports, email, permissions, and support
+          troubleshooting.
         </p>
-        <nav class="doc-nav" aria-label="Documentation sections">
-          <a href="#installation">Installation</a>
-          <a href="#setup-wizard">Setup wizard</a>
-          <a href="#field-mapping">Field mapping</a>
-          <a href="#statuses">Statuses</a>
-          <a href="#first-quote">First quote</a>
-          <a href="#reports">Reports</a>
-          <a href="#pdfs-email">PDFs and email</a>
-          <a href="#recurring">Recurring</a>
-          <a href="#permissions">Permissions</a>
-          <a href="#dark-mode">Dark mode</a>
-          <a href="#troubleshooting">Troubleshooting</a>
-        </nav>
       </section>
 
-      <section class="policy-layout" aria-label="Documentation content">
-        <h2 id="installation">Installation</h2>
-        <ol class="step-list">
-          <li>Open the RevFlow Atlassian Marketplace listing or the current Marketplace access route from Quotaurus.</li>
-          <li>Select the Jira Cloud site where RevFlow should be installed.</li>
-          <li>Review the requested permissions on the Atlassian install screen.</li>
-          <li>Open a Jira project and look for the project page named RevFlow.</li>
-          <li>Open a Jira issue and look for the issue panel named RevFlow.</li>
-        </ol>
-        <p>
-          Installation requires Jira Cloud admin permission. Contact Quotaurus if
-          you need the current Marketplace access route.
-        </p>
+      <section class="wiki-shell" aria-label="RevFlow documentation">
+        <aside class="wiki-sidebar" aria-label="Documentation navigation">
+          <div class="wiki-sidebar-panel">
+            <span class="wiki-label">Contents</span>
+            <nav class="wiki-nav">
+              <a href="#start-here">Start here</a>
+              <a href="#admin-setup">Admin setup</a>
+              <a href="#quote-workflow">Quote workflow</a>
+              <a href="#reports-exports">Reports and exports</a>
+              <a href="#pdf-email">PDF and email</a>
+              <a href="#recurring-quotes">Recurring quotes</a>
+              <a href="#permissions">Permissions</a>
+              <a href="#data-security">Data and security</a>
+              <a href="#troubleshooting">Troubleshooting</a>
+              <a href="#glossary">Glossary</a>
+            </nav>
+          </div>
+        </aside>
 
-        <h2 id="setup-wizard">First-run setup wizard</h2>
-        <p>
-          When a project is not configured, RevFlow shows project admins a setup
-          banner and opens the first-run setup wizard. The same wizard can be
-          relaunched later from settings.
-        </p>
-        <ol class="step-list">
-          <li>Welcome and project context.</li>
-          <li>Jira field mappings.</li>
-          <li>Quote statuses, work buckets, and issue types.</li>
-          <li>Company details for quote output.</li>
-          <li>Default currency, supported currencies, and tax settings.</li>
-          <li>Quote items, clients, and revenue streams.</li>
-          <li>Feature flags and optional email provider settings.</li>
-          <li>Access rules for configuring, creating, editing, sending, deleting, and reporting.</li>
-          <li>Review, export, import, and finish setup.</li>
-        </ol>
-        <p>
-          Finishing first-run setup starts the guided product tour for the
-          project page workflow.
-        </p>
+        <div class="wiki-content">
+          <section class="wiki-section" id="start-here" aria-labelledby="start-title">
+            <p class="section-kicker">Start here</p>
+            <h2 id="start-title">Choose the guide that matches what you need to do.</h2>
+            <div class="wiki-card-grid">
+              <a class="wiki-card" href="#install-open">
+                <span>Install</span>
+                Get RevFlow installed and visible in Jira Cloud.
+              </a>
+              <a class="wiki-card" href="#complete-setup">
+                <span>Set up</span>
+                Complete the first-run wizard for a project.
+              </a>
+              <a class="wiki-card" href="#create-quote">
+                <span>Create quote</span>
+                Create and link your first quote record.
+              </a>
+              <a class="wiki-card" href="#reporting-guide">
+                <span>Report</span>
+                Use revenue, coverage, and completion reports.
+              </a>
+              <a class="wiki-card" href="#email-guide">
+                <span>Email</span>
+                Configure optional Mailgun or SendGrid sending.
+              </a>
+              <a class="wiki-card" href="#fix-common-issues">
+                <span>Fix issues</span>
+                Work through common setup and workflow problems.
+              </a>
+            </div>
+          </section>
 
-        <h2 id="field-mapping">Jira field mapping</h2>
-        <p>
-          RevFlow can map to Jira fields for systems, acceptance criteria,
-          parent or epic relationships, sprint metadata, estimates, and logged
-          time. The setup wizard uses live Jira field metadata and marks
-          auto-detected suggestions where it can.
-        </p>
+          <section class="wiki-section" id="admin-setup" aria-labelledby="admin-title">
+            <p class="section-kicker">Admin setup</p>
+            <h2 id="admin-title">Install RevFlow and configure the project workflow.</h2>
 
-        <h2 id="statuses">Statuses, issue types, and work buckets</h2>
-        <p>
-          RevFlow ships with default quote statuses including Draft, Sent,
-          Accepted, Rejected, Invoiceable, Closed, and Cancelled. Admins can
-          configure quote statuses and map Jira work statuses into reporting
-          buckets such as order, WIP, invoiceable, lost, and closed.
-        </p>
-        <p>
-          Missing quote coverage reporting uses configured issue types, so teams
-          can focus coverage checks on the Jira work types that matter.
-        </p>
+            <span class="anchor-target" id="setup-wizard" aria-hidden="true"></span>
+            <article class="wiki-article" id="install-open">
+              <h3>How to install and open RevFlow</h3>
+              <ol class="step-list">
+                <li>Open the RevFlow Atlassian Marketplace listing or the current access route from Quotaurus.</li>
+                <li>Select the Jira Cloud site where the app should be installed.</li>
+                <li>Review the requested Forge permissions on the Atlassian install screen.</li>
+                <li>Open a Jira project and look for the project page named RevFlow.</li>
+                <li>Open a Jira issue and look for the issue panel named RevFlow.</li>
+              </ol>
+              <p>
+                Installation requires Jira Cloud admin permission. If you do not
+                see RevFlow after installation, confirm the app was installed on
+                the correct Jira Cloud site.
+              </p>
+            </article>
 
-        <h2 id="first-quote">Create and link your first quote</h2>
-        <ol class="step-list">
-          <li>Open a Jira issue or the RevFlow project page.</li>
-          <li>Create a draft quote and add client, title, currency, PO, forecast completion, notes, system, and revenue stream details.</li>
-          <li>Add line items with product, rate, quantity, and tax settings.</li>
-          <li>Save the quote and link it to the Jira issues it covers.</li>
-          <li>Generate a PDF preview or move the quote through your configured status flow.</li>
-        </ol>
+            <article class="wiki-article" id="complete-setup">
+              <h3>How to complete the first-run setup wizard</h3>
+              <p>
+                When a project is not configured, RevFlow shows a setup banner to
+                project admins. The wizard is the main configuration surface and
+                can also be relaunched later from settings.
+              </p>
+              <ol class="step-list">
+                <li>Open the RevFlow project page as a user with setup permission.</li>
+                <li>Start the setup wizard from the setup banner or settings menu.</li>
+                <li>Confirm Jira field mappings for systems, acceptance criteria, parent or epic relationships, sprint metadata, estimates, and logged time.</li>
+                <li>Review quote statuses, reporting buckets, and issue types.</li>
+                <li>Add company, currency, tax, quote item, client, and revenue stream details.</li>
+                <li>Choose feature flags and optional email provider settings.</li>
+                <li>Set access rules for configuration, quote actions, deletion, sending, and report viewing.</li>
+                <li>Review the summary and finish setup.</li>
+              </ol>
+              <p>
+                Finishing setup starts the guided tour so admins can see the
+                project page workflow before wider rollout.
+              </p>
+            </article>
 
-        <h2 id="reports">Reports</h2>
-        <p>
-          RevFlow includes project reporting views for quote value by status,
-          quote funnel, value over time, top clients, top systems, top revenue
-          streams, billable activity, completion month, and billing exports.
-        </p>
-        <p>
-          Missing quote coverage reports highlight configured issue types in the
-          current and next sprint that do not have linked quote coverage.
-        </p>
+            <article class="wiki-article" id="field-mapping">
+              <h3>Reference: Jira field mappings</h3>
+              <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                  <thead>
+                    <tr>
+                      <th>Mapping</th>
+                      <th>Used for</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>System field</td>
+                      <td>Grouping quote and delivery work by product, system, or service area.</td>
+                    </tr>
+                    <tr>
+                      <td>Acceptance criteria</td>
+                      <td>Supporting quote context when work is created from Jira issues.</td>
+                    </tr>
+                    <tr>
+                      <td>Epic or parent relationship</td>
+                      <td>Reporting and coverage checks that need parent delivery context.</td>
+                    </tr>
+                    <tr>
+                      <td>Sprint field</td>
+                      <td>Current and next sprint missing quote coverage reports.</td>
+                    </tr>
+                    <tr>
+                      <td>Estimate and logged time</td>
+                      <td>Delivery economics and billable activity reporting.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
 
-        <h2 id="pdfs-email">PDFs and optional email sending</h2>
-        <p>
-          Quote PDFs include quote reference and version, project title, quote
-          date, client details, PO number, notes, line items, tax, and totals.
-          PDF generation does not require email sending to be configured.
-        </p>
-        <p>
-          Email sending is optional. The setup wizard supports provider choices
-          for None, Mailgun, and SendGrid. When a configured provider sends a
-          quote email successfully, RevFlow stores recipient and sent-date
-          metadata on the quote.
-        </p>
+            <article class="wiki-article" id="statuses">
+              <h3>Reference: quote statuses and work buckets</h3>
+              <p>
+                RevFlow ships with default quote statuses including Draft, Sent,
+                Accepted, Rejected, Invoiceable, Closed, and Cancelled. Admins
+                can configure statuses and map Jira work statuses into reporting
+                buckets such as order, WIP, invoiceable, lost, and closed.
+              </p>
+              <p>
+                Missing quote coverage uses configured issue types, so teams can
+                focus coverage checks on the Jira work types that matter.
+              </p>
+            </article>
+          </section>
 
-        <h2 id="recurring">Recurring quote templates</h2>
-        <p>
-          Recurring templates can generate monthly draft quotes. Templates store
-          client, title, currency, system, revenue stream, PO number, notes, tax
-          setting, status, line items, and billing day. Schedules support days 1
-          to 28 and a last-day-of-month option.
-        </p>
+          <section class="wiki-section" id="quote-workflow" aria-labelledby="quote-title">
+            <p class="section-kicker">Quote workflow</p>
+            <h2 id="quote-title">Create, link, price, and track quotes from Jira work.</h2>
 
-        <h2 id="permissions">Permissions and access</h2>
-        <p>
-          RevFlow configuration includes permission modes for Anyone, Named
-          users, Project admins, and Jira admins. Admins can configure access for
-          setup, quote creation, editing, sending, deletion, and report viewing.
-        </p>
-        <p>
-          The app manifest requests Forge app storage, read Jira work, write Jira
-          work, and read Jira user scopes. Teams should review the Atlassian
-          install screen before rollout.
-        </p>
+            <article class="wiki-article" id="create-quote">
+              <h3>How to create your first quote</h3>
+              <ol class="step-list">
+                <li>Open a Jira issue or the RevFlow project page.</li>
+                <li>Create a draft quote.</li>
+                <li>Add client, title, currency, PO, forecast completion, notes, system, and revenue stream details.</li>
+                <li>Add line items with product, rate, quantity, and tax settings.</li>
+                <li>Save the quote.</li>
+                <li>Generate a PDF preview or move the quote through your configured status flow.</li>
+              </ol>
+            </article>
 
-        <h2 id="import-export">Setup import and export</h2>
-        <p>
-          RevFlow setup can be exported and imported as JSON. This is useful for
-          review, repeat configuration, and support conversations about project
-          setup.
-        </p>
+            <article class="wiki-article" id="link-issues">
+              <h3>How to link a quote to Jira issues</h3>
+              <ol class="step-list">
+                <li>Open the relevant quote from the RevFlow project page or issue panel.</li>
+                <li>Use the quote linking workflow to attach the Jira issues covered by the quote.</li>
+                <li>Save the quote record.</li>
+                <li>Open a linked Jira issue and confirm the RevFlow issue panel shows the linked quote context.</li>
+              </ol>
+              <p>
+                Linking quotes to issues is the core behaviour that keeps
+                commercial context beside delivery scope.
+              </p>
+            </article>
 
-        <h2 id="dark-mode">Jira dark mode compatibility</h2>
-        <p>
-          RevFlow enables Atlassian Forge theme support and includes dark-mode
-          styles for panels, forms, tables, reports, status pills, overlays, and
-          setup wizard screens when Jira is using dark theme or match-system
-          theme behaviour.
-        </p>
+            <article class="wiki-article" id="saved-quotes">
+              <h3>How to find saved quotes</h3>
+              <p>
+                The RevFlow project page includes saved quote filtering by
+                status, system, created date, and search text. Use this view to
+                reopen draft, sent, accepted, invoiceable, closed, rejected, or
+                cancelled quote records.
+              </p>
+            </article>
+          </section>
 
-        <h2 id="troubleshooting">Troubleshooting</h2>
-        <ul class="plain-list">
-          <li>If RevFlow is not visible, confirm the app is installed on the correct Jira Cloud site.</li>
-          <li>If setup is blocked, confirm the current user has project admin or configured setup permission.</li>
-          <li>If linked quote information is missing, confirm the quote is linked to the relevant Jira issue.</li>
-          <li>If missing coverage looks wrong, review configured issue types, sprint field, and work status mappings.</li>
-          <li>If a PDF cannot be generated, include the quote reference and visible error in support email.</li>
-          <li>If email sending fails, check whether Mailgun or SendGrid is configured and enabled for the project.</li>
-          <li>If a quote cannot be marked Invoiceable, check whether required PO details have been added.</li>
-        </ul>
+          <section class="wiki-section" id="reports-exports" aria-labelledby="reports-title">
+            <p class="section-kicker">Reports and exports</p>
+            <h2 id="reports-title">Use RevFlow reports to spot revenue and coverage gaps.</h2>
+
+            <article class="wiki-article" id="reporting-guide">
+              <h3>How to use the reporting views</h3>
+              <ol class="step-list">
+                <li>Open the RevFlow project page.</li>
+                <li>Switch from saved quotes to reports.</li>
+                <li>Choose the relevant date range and currency where available.</li>
+                <li>Review quote value by status, quote funnel, value over time, top clients, top systems, and top revenue streams.</li>
+                <li>Use billable activity and completion-month views for delivery-linked revenue checks.</li>
+              </ol>
+            </article>
+
+            <article class="wiki-article" id="missing-coverage">
+              <h3>How to review missing quote coverage</h3>
+              <p>
+                Missing coverage reports highlight configured issue types in the
+                current and next sprint that do not have linked quote coverage.
+                If the report looks wrong, review setup for issue types, sprint
+                field mapping, and work status mappings.
+              </p>
+            </article>
+
+            <article class="wiki-article" id="billing-export">
+              <h3>How to prepare billing exports</h3>
+              <p>
+                RevFlow supports billing export columns and profiles so teams can
+                prepare finance handoff data. The default export structure can
+                include project, client, quote reference, description, net
+                value, tax, total, and invoice number.
+              </p>
+            </article>
+          </section>
+
+          <section class="wiki-section" id="pdf-email" aria-labelledby="pdf-email-title">
+            <p class="section-kicker">PDF and email</p>
+            <h2 id="pdf-email-title">Generate quote PDFs and configure optional sending.</h2>
+
+            <article class="wiki-article" id="pdf-guide">
+              <h3>How to generate a quote PDF</h3>
+              <ol class="step-list">
+                <li>Open the quote record.</li>
+                <li>Confirm client, line items, tax, currency, PO, and notes are correct.</li>
+                <li>Generate the PDF preview.</li>
+                <li>Share or send the PDF according to your configured workflow.</li>
+              </ol>
+              <p>
+                PDF generation does not require email sending to be configured.
+              </p>
+            </article>
+
+            <article class="wiki-article" id="email-guide">
+              <h3>How to configure quote email sending</h3>
+              <p>
+                Email sending is optional. The setup wizard supports provider
+                choices for None, Mailgun, and SendGrid.
+              </p>
+              <ol class="step-list">
+                <li>Open RevFlow setup as a project admin or configured setup user.</li>
+                <li>Go to the features and email step.</li>
+                <li>Choose Mailgun or SendGrid if the project should send quote emails.</li>
+                <li>Add the provider settings required by your sending setup.</li>
+                <li>Save setup and test with a non-sensitive quote before wider rollout.</li>
+              </ol>
+              <p>
+                When a configured provider sends successfully, RevFlow stores
+                recipient and sent-date metadata on the quote.
+              </p>
+            </article>
+          </section>
+
+          <section class="wiki-section" id="recurring-quotes" aria-labelledby="recurring-title">
+            <p class="section-kicker">Recurring quotes</p>
+            <h2 id="recurring-title">Create monthly draft quotes for repeat work.</h2>
+            <article class="wiki-article" id="recurring-guide">
+              <h3>How to create a recurring quote template</h3>
+              <ol class="step-list">
+                <li>Open the recurring quote workflow from RevFlow settings.</li>
+                <li>Add client, title, currency, system, revenue stream, PO number, notes, tax setting, and status.</li>
+                <li>Add the line items that should appear on the generated draft.</li>
+                <li>Choose a billing day from 1 to 28, or use the last-day-of-month option.</li>
+                <li>Save the template and review generated monthly drafts before sending.</li>
+              </ol>
+            </article>
+          </section>
+
+          <section class="wiki-section" id="permissions" aria-labelledby="permissions-title">
+            <p class="section-kicker">Permissions</p>
+            <h2 id="permissions-title">Control who can configure and use RevFlow.</h2>
+            <article class="wiki-article">
+              <h3>Reference: permission modes</h3>
+              <p>
+                RevFlow configuration includes permission modes for Anyone,
+                Named users, Project admins, and Jira admins. Admins can
+                configure access for setup, quote creation, quote editing, quote
+                sending, quote deletion, and report viewing.
+              </p>
+              <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                  <thead>
+                    <tr>
+                      <th>Mode</th>
+                      <th>Use when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Anyone</td>
+                      <td>The action can be available to the project team.</td>
+                    </tr>
+                    <tr>
+                      <td>Named users</td>
+                      <td>Only specific account IDs should have access.</td>
+                    </tr>
+                    <tr>
+                      <td>Project admins</td>
+                      <td>Configuration should stay with Jira project administrators.</td>
+                    </tr>
+                    <tr>
+                      <td>Jira admins</td>
+                      <td>The action should be restricted to Jira administrators.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </section>
+
+          <section class="wiki-section" id="data-security" aria-labelledby="data-title">
+            <p class="section-kicker">Data and security</p>
+            <h2 id="data-title">Understand storage, scopes, setup export, and theme support.</h2>
+
+            <article class="wiki-article" id="setup-export">
+              <h3>How to export or import setup</h3>
+              <p>
+                RevFlow setup can be exported and imported as JSON. Use this for
+                configuration review, repeated project setup, or support
+                conversations about how a project is configured.
+              </p>
+            </article>
+
+            <article class="wiki-article">
+              <h3>Reference: app scopes</h3>
+              <p>
+                The app manifest requests Forge app storage, read Jira work,
+                write Jira work, and read Jira user scopes. Teams should review
+                the Atlassian install screen and the
+                <a href="security.html">Security & Trust</a> page before rollout.
+              </p>
+            </article>
+
+            <article class="wiki-article" id="dark-mode">
+              <h3>Reference: Jira dark mode compatibility</h3>
+              <p>
+                RevFlow enables Atlassian Forge theme support and includes
+                dark-mode styles for panels, forms, tables, reports, status
+                pills, overlays, and setup wizard screens when Jira is using
+                dark theme or match-system theme behaviour.
+              </p>
+            </article>
+          </section>
+
+          <section class="wiki-section" id="troubleshooting" aria-labelledby="troubleshooting-title">
+            <p class="section-kicker">Troubleshooting</p>
+            <h2 id="troubleshooting-title">Fix common setup and workflow issues.</h2>
+
+            <article class="wiki-article" id="fix-common-issues">
+              <h3>Common fixes</h3>
+              <ul class="plain-list">
+                <li>If RevFlow is not visible, confirm the app is installed on the correct Jira Cloud site.</li>
+                <li>If setup is blocked, confirm the current user has project admin or configured setup permission.</li>
+                <li>If linked quote information is missing, confirm the quote is linked to the relevant Jira issue.</li>
+                <li>If missing coverage looks wrong, review configured issue types, sprint field, and work status mappings.</li>
+                <li>If a PDF cannot be generated, include the quote reference and visible error in support email.</li>
+                <li>If email sending fails, check whether Mailgun or SendGrid is configured and enabled for the project.</li>
+                <li>If a quote cannot be marked Invoiceable, check whether required PO details have been added.</li>
+              </ul>
+            </article>
+
+            <article class="wiki-article" id="support-details">
+              <h3>What to include when contacting support</h3>
+              <ul class="plain-list">
+                <li>Your Atlassian site URL, such as <code>example.atlassian.net</code>.</li>
+                <li>The Jira project, issue key, quote reference, or report view involved.</li>
+                <li>Whether the issue affects setup, quote editing, PDF generation, email sending, reports, recurring quotes, billing exports, or dark mode.</li>
+                <li>Steps to reproduce the issue and any visible error message.</li>
+              </ul>
+              <p>
+                Email <a href="mailto:support@quotaurus.com?subject=RevFlow%20support">support@quotaurus.com</a>
+                for help.
+              </p>
+            </article>
+          </section>
+
+          <section class="wiki-section" id="glossary" aria-labelledby="glossary-title">
+            <p class="section-kicker">Glossary</p>
+            <h2 id="glossary-title">RevFlow terms used in the app and docs.</h2>
+            <dl class="wiki-glossary">
+              <div>
+                <dt>Quote record</dt>
+                <dd>The RevFlow record that stores client, line item, status, value, issue links, PDF, and send metadata.</dd>
+              </div>
+              <div>
+                <dt>Work bucket</dt>
+                <dd>A reporting group such as order, WIP, invoiceable, lost, or closed, mapped from Jira statuses.</dd>
+              </div>
+              <div>
+                <dt>Missing quote coverage</dt>
+                <dd>A report showing configured sprint work that does not have linked quote coverage.</dd>
+              </div>
+              <div>
+                <dt>Recurring template</dt>
+                <dd>A saved template that can create monthly draft quotes for repeat work.</dd>
+              </div>
+              <div>
+                <dt>Setup export</dt>
+                <dd>A JSON export of RevFlow project configuration for review, support, or repeat setup.</dd>
+              </div>
+            </dl>
+          </section>
+        </div>
       </section>
     </main>
 

@@ -21,6 +21,11 @@
     ".marketplace-band > *",
     ".content-grid > article",
     ".policy-layout > *",
+    ".wiki-sidebar-panel",
+    ".wiki-section",
+    ".wiki-card",
+    ".wiki-article",
+    ".wiki-glossary div",
     ".doc-nav a"
   ];
 
