@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" role="img" aria-labelledby="title desc">
+  <title id="title">RevFlow dark mode compatibility mockup</title>
+  <desc id="desc">Illustrated mockup showing RevFlow inside Jira dark mode with dark panels, linked quote status, value, and issue context.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f1715"/>
+      <stop offset="1" stop-color="#1c2a37"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1">
+      <stop offset="0" stop-color="#183b37"/>
+      <stop offset="1" stop-color="#244b63"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#000000" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+
+  <rect width="920" height="620" rx="32" fill="url(#bg)"/>
+  <rect x="38" y="38" width="844" height="544" rx="22" fill="#111c1a" filter="url(#shadow)"/>
+  <rect x="38" y="38" width="844" height="66" rx="22" fill="#17201d"/>
+  <rect x="38" y="80" width="844" height="24" fill="#17201d"/>
+  <circle cx="76" cy="70" r="10" fill="#b95f52"/>
+  <circle cx="108" cy="70" r="10" fill="#bf7d2e"/>
+  <circle cx="140" cy="70" r="10" fill="#236c69"/>
+  <text x="184" y="77" fill="#e8f0ef" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="850">Jira dark mode</text>
+  <rect x="718" y="56" width="112" height="28" rx="14" fill="#263633"/>
+  <text x="744" y="75" fill="#cde0dd" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800">RevFlow</text>
+
+  <rect x="74" y="142" width="454" height="392" rx="18" fill="#15211f" stroke="#30413d"/>
+  <text x="104" y="188" fill="#f4f7f6" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850">ABC-123 Client portal scope</text>
+  <text x="104" y="224" fill="#a8b5b0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="650">Story in current sprint</text>
+  <rect x="104" y="262" width="130" height="30" rx="15" fill="#223331"/>
+  <text x="124" y="282" fill="#cde0dd" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800">In Progress</text>
+  <rect x="250" y="262" width="130" height="30" rx="15" fill="#26384d"/>
+  <text x="270" y="282" fill="#cfe0f2" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800">Sprint 42</text>
+  <rect x="104" y="338" width="364" height="14" rx="7" fill="#42514d"/>
+  <rect x="104" y="374" width="318" height="14" rx="7" fill="#34433f"/>
+  <rect x="104" y="410" width="344" height="14" rx="7" fill="#34433f"/>
+  <rect x="104" y="466" width="164" height="34" rx="9" fill="#233f3b"/>
+  <text x="128" y="488" fill="#b8e2da" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="850">Linked quote</text>
+
+  <rect x="564" y="142" width="282" height="392" rx="18" fill="url(#panel)"/>
+  <text x="596" y="188" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850">RevFlow</text>
+  <rect x="596" y="214" width="104" height="30" rx="15" fill="#f1b96f"/>
+  <text x="619" y="234" fill="#173d38" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="850">Accepted</text>
+
+  <text x="596" y="292" fill="#cde0dd" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="750">Client</text>
+  <text x="596" y="320" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="850">Acme Services</text>
+  <text x="596" y="370" fill="#cde0dd" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="750">Quote value</text>
+  <text x="596" y="406" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="850">GBP 12,450</text>
+  <rect x="596" y="438" width="210" height="1" fill="#628a86"/>
+  <text x="596" y="472" fill="#cde0dd" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="750">Status bucket</text>
+  <text x="704" y="472" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="850">Order</text>
+  <text x="596" y="502" fill="#cde0dd" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="750">Theme</text>
+  <text x="704" y="502" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="850">Jira dark</text>
+</svg>

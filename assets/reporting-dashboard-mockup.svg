@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" role="img" aria-labelledby="title desc">
+  <title id="title">RevFlow reporting dashboard mockup</title>
+  <desc id="desc">Illustrated mockup of RevFlow revenue reports for WIP value, invoiceable value, quote funnel, top clients, and missing quote coverage.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fffdf6"/>
+      <stop offset="1" stop-color="#e8f0ef"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#14211e" flood-opacity="0.17"/>
+    </filter>
+  </defs>
+
+  <rect width="920" height="620" rx="32" fill="url(#bg)"/>
+  <rect x="38" y="38" width="844" height="544" rx="22" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="38" y="38" width="844" height="68" rx="22" fill="#f6f8fb"/>
+  <rect x="38" y="82" width="844" height="24" fill="#f6f8fb"/>
+  <text x="74" y="80" fill="#173d38" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="850">RevFlow reports</text>
+  <rect x="586" y="58" width="86" height="28" rx="14" fill="#173d38"/>
+  <text x="608" y="77" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800">Reports</text>
+  <rect x="686" y="58" width="116" height="28" rx="14" fill="#e9f2f1"/>
+  <text x="704" y="77" fill="#236c69" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800">Billable activity</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="74" y="138" width="172" height="100" rx="14" fill="#173d38"/>
+    <text x="96" y="170" fill="#cde0dd" font-size="13" font-weight="750">WIP value</text>
+    <text x="96" y="207" fill="#fffdf6" font-size="28" font-weight="850">GBP 18.2k</text>
+
+    <rect x="266" y="138" width="172" height="100" rx="14" fill="#236c69"/>
+    <text x="288" y="170" fill="#d5e6e3" font-size="13" font-weight="750">Invoiceable</text>
+    <text x="288" y="207" fill="#fffdf6" font-size="28" font-weight="850">GBP 9.4k</text>
+
+    <rect x="458" y="138" width="172" height="100" rx="14" fill="#315d92"/>
+    <text x="480" y="170" fill="#dbe7f5" font-size="13" font-weight="750">Accepted</text>
+    <text x="480" y="207" fill="#fffdf6" font-size="28" font-weight="850">GBP 42.8k</text>
+
+    <rect x="650" y="138" width="172" height="100" rx="14" fill="#f3e4d0"/>
+    <text x="672" y="170" fill="#8a551d" font-size="13" font-weight="750">Missing coverage</text>
+    <text x="672" y="207" fill="#173d38" font-size="28" font-weight="850">7 issues</text>
+  </g>
+
+  <rect x="74" y="276" width="364" height="226" rx="16" fill="#fffdf6" stroke="#d9e4e1"/>
+  <text x="98" y="314" fill="#173d38" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">Quote value over time</text>
+  <line x1="104" y1="464" x2="398" y2="464" stroke="#d9e4e1" stroke-width="2"/>
+  <line x1="104" y1="346" x2="104" y2="464" stroke="#d9e4e1" stroke-width="2"/>
+  <rect x="132" y="410" width="30" height="54" rx="6" fill="#236c69"/>
+  <rect x="178" y="378" width="30" height="86" rx="6" fill="#315d92"/>
+  <rect x="224" y="394" width="30" height="70" rx="6" fill="#bf7d2e"/>
+  <rect x="270" y="356" width="30" height="108" rx="6" fill="#173d38"/>
+  <rect x="316" y="382" width="30" height="82" rx="6" fill="#b95f52"/>
+
+  <rect x="458" y="276" width="364" height="226" rx="16" fill="#fffdf6" stroke="#d9e4e1"/>
+  <text x="482" y="314" fill="#173d38" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">Current sprint coverage</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="13" font-weight="760">
+    <rect x="482" y="346" width="316" height="34" rx="8" fill="#f6f8fb"/>
+    <text x="500" y="368" fill="#17201d">STORY-214</text>
+    <text x="620" y="368" fill="#5b6661">No linked quote</text>
+    <rect x="482" y="392" width="316" height="34" rx="8" fill="#f6f8fb"/>
+    <text x="500" y="414" fill="#17201d">TASK-088</text>
+    <text x="620" y="414" fill="#5b6661">No linked quote</text>
+    <rect x="482" y="438" width="316" height="34" rx="8" fill="#f6f8fb"/>
+    <text x="500" y="460" fill="#17201d">BUG-617</text>
+    <text x="620" y="460" fill="#5b6661">Review coverage</text>
+  </g>
+
+  <rect x="74" y="526" width="748" height="24" rx="12" fill="#e9f2f1"/>
+  <text x="98" y="543" fill="#236c69" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800">Reports include quote funnel, top clients, top systems, revenue streams, completion month, and billing export views.</text>
+</svg>

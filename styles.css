@@ -243,6 +243,7 @@ h3 {
 .intro-band,
 .feature-grid,
 .product-tour,
+.visual-band,
 .use-case-band,
 .output-band,
 .comparison-band,
@@ -296,6 +297,7 @@ h3 {
 .policy-layout li,
 .feature-card p,
 .tour-shot p,
+.visual-card p,
 .use-case-grid p,
 .faq-grid p,
 .contact-card p,
@@ -358,6 +360,7 @@ h3 {
 }
 
 .product-tour,
+.visual-band,
 .use-case-band,
 .output-band,
 .comparison-band,
@@ -372,6 +375,7 @@ h3 {
 }
 
 .tour-grid,
+.visual-grid,
 .use-case-grid,
 .faq-grid {
   display: grid;
@@ -380,11 +384,33 @@ h3 {
 }
 
 .tour-shot,
+.visual-card,
 .use-case-grid article,
 .faq-grid article {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 1.2rem;
+  background: var(--paper-strong);
+}
+
+.visual-band {
+  background: #f4f7f6;
+}
+
+.visual-card {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  padding: 1rem;
+  box-shadow: 0 1rem 2.5rem rgba(24, 34, 30, 0.06);
+}
+
+.visual-card img {
+  width: 100%;
+  aspect-ratio: 46 / 31;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 7px;
   background: var(--paper-strong);
 }
 
@@ -771,6 +797,7 @@ h3 {
   .feature-grid,
   .workflow-list,
   .tour-grid,
+  .visual-grid,
   .use-case-grid,
   .trust-strip,
   .content-grid.three {
@@ -836,6 +863,7 @@ h3 {
   .feature-grid,
   .workflow-list,
   .tour-grid,
+  .visual-grid,
   .use-case-grid,
   .faq-grid,
   .trust-strip,

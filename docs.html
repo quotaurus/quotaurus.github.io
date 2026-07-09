@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Quotaurus documentation for installation, first quote setup, Jira issue linking, PDFs, Mailgun, recurring quotes, statuses, and troubleshooting."
+      content="RevFlow documentation for setup wizard, Jira field mappings, quote-to-issue linking, reports, PDFs, Mailgun, SendGrid, recurring quotes, permissions, dark mode, and troubleshooting."
     >
-    <title>Documentation | Quotaurus</title>
+    <title>Documentation | RevFlow by Quotaurus</title>
     <link rel="icon" href="assets/quotaurus-logo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -31,19 +31,22 @@
     <main>
       <section class="page-hero" aria-labelledby="docs-title">
         <p class="eyebrow">Documentation</p>
-        <h1 id="docs-title">From install to first quote.</h1>
+        <h1 id="docs-title">Set up RevFlow for your Jira workflow.</h1>
         <p>
-          Short guides for Jira admins and delivery teams setting up Quotaurus
-          in Jira Cloud.
+          Short guides for Jira admins and delivery teams configuring RevFlow,
+          the Jira app from Quotaurus for quote-to-delivery revenue control.
         </p>
         <nav class="doc-nav" aria-label="Documentation sections">
           <a href="#installation">Installation</a>
-          <a href="#first-quote">First quote</a>
-          <a href="#issue-linking">Issue linking</a>
-          <a href="#pdfs">PDFs</a>
-          <a href="#mailgun">Mailgun</a>
-          <a href="#recurring">Recurring</a>
+          <a href="#setup-wizard">Setup wizard</a>
+          <a href="#field-mapping">Field mapping</a>
           <a href="#statuses">Statuses</a>
+          <a href="#first-quote">First quote</a>
+          <a href="#reports">Reports</a>
+          <a href="#pdfs-email">PDFs and email</a>
+          <a href="#recurring">Recurring</a>
+          <a href="#permissions">Permissions</a>
+          <a href="#dark-mode">Dark mode</a>
           <a href="#troubleshooting">Troubleshooting</a>
         </nav>
       </section>
@@ -51,88 +54,136 @@
       <section class="policy-layout" aria-label="Documentation content">
         <h2 id="installation">Installation</h2>
         <ol class="step-list">
-          <li>Open the Quotaurus Atlassian Marketplace listing when available.</li>
-          <li>Select the Jira Cloud site where the app should be installed.</li>
+          <li>Open the RevFlow Atlassian Marketplace listing or the current Marketplace access route from Quotaurus.</li>
+          <li>Select the Jira Cloud site where RevFlow should be installed.</li>
           <li>Review the requested permissions on the Atlassian install screen.</li>
-          <li>Open a Jira project and look for the project page named Quotes.</li>
-          <li>Open a Jira issue and look for the issue panel named Quotes.</li>
+          <li>Open a Jira project and look for the project page named RevFlow.</li>
+          <li>Open a Jira issue and look for the issue panel named RevFlow.</li>
         </ol>
         <p>
           Installation requires Jira Cloud admin permission. Contact Quotaurus if
           you need the current Marketplace access route.
         </p>
 
-        <h2 id="first-quote">Create your first quote</h2>
+        <h2 id="setup-wizard">First-run setup wizard</h2>
+        <p>
+          When a project is not configured, RevFlow shows project admins a setup
+          banner and opens the first-run setup wizard. The same wizard can be
+          relaunched later from settings.
+        </p>
         <ol class="step-list">
-          <li>Open a Jira issue or the project Quotes page.</li>
-          <li>Create a draft quote.</li>
-          <li>Add client details, title, currency, forecasted completion date, and notes.</li>
-          <li>Add line items with product, rate, quantity, and VAT setting.</li>
-          <li>Save the quote, then generate a PDF preview.</li>
+          <li>Welcome and project context.</li>
+          <li>Jira field mappings.</li>
+          <li>Quote statuses, work buckets, and issue types.</li>
+          <li>Company details for quote output.</li>
+          <li>Default currency, supported currencies, and tax settings.</li>
+          <li>Quote items, clients, and revenue streams.</li>
+          <li>Feature flags and optional email provider settings.</li>
+          <li>Access rules for configuring, creating, editing, sending, deleting, and reporting.</li>
+          <li>Review, export, import, and finish setup.</li>
+        </ol>
+        <p>
+          Finishing first-run setup starts the guided product tour for the
+          project page workflow.
+        </p>
+
+        <h2 id="field-mapping">Jira field mapping</h2>
+        <p>
+          RevFlow can map to Jira fields for systems, acceptance criteria,
+          parent or epic relationships, sprint metadata, estimates, and logged
+          time. The setup wizard uses live Jira field metadata and marks
+          auto-detected suggestions where it can.
+        </p>
+
+        <h2 id="statuses">Statuses, issue types, and work buckets</h2>
+        <p>
+          RevFlow ships with default quote statuses including Draft, Sent,
+          Accepted, Rejected, Invoiceable, Closed, and Cancelled. Admins can
+          configure quote statuses and map Jira work statuses into reporting
+          buckets such as order, WIP, invoiceable, lost, and closed.
+        </p>
+        <p>
+          Missing quote coverage reporting uses configured issue types, so teams
+          can focus coverage checks on the Jira work types that matter.
+        </p>
+
+        <h2 id="first-quote">Create and link your first quote</h2>
+        <ol class="step-list">
+          <li>Open a Jira issue or the RevFlow project page.</li>
+          <li>Create a draft quote and add client, title, currency, PO, forecast completion, notes, system, and revenue stream details.</li>
+          <li>Add line items with product, rate, quantity, and tax settings.</li>
+          <li>Save the quote and link it to the Jira issues it covers.</li>
+          <li>Generate a PDF preview or move the quote through your configured status flow.</li>
         </ol>
 
-        <h2 id="issue-linking">Link quotes to Jira issues</h2>
+        <h2 id="reports">Reports</h2>
         <p>
-          Quotaurus can link open quotes to Jira issues. Linked quotes are
-          visible from the issue panel and can be opened back in the project
-          Quotes page.
+          RevFlow includes project reporting views for quote value by status,
+          quote funnel, value over time, top clients, top systems, top revenue
+          streams, billable activity, completion month, and billing exports.
+        </p>
+        <p>
+          Missing quote coverage reports highlight configured issue types in the
+          current and next sprint that do not have linked quote coverage.
         </p>
 
-        <h2 id="pdfs">Generate quote PDFs</h2>
+        <h2 id="pdfs-email">PDFs and optional email sending</h2>
         <p>
           Quote PDFs include quote reference and version, project title, quote
-          date, expiry text, prepared-by detail when available, client, PO
-          number, notes, line items, VAT, and totals.
+          date, client details, PO number, notes, line items, tax, and totals.
+          PDF generation does not require email sending to be configured.
         </p>
         <p>
-          PDF generation does not require Mailgun. Teams can download or share
-          a generated PDF according to their internal process.
+          Email sending is optional. The setup wizard supports provider choices
+          for None, Mailgun, and SendGrid. When a configured provider sends a
+          quote email successfully, RevFlow stores recipient and sent-date
+          metadata on the quote.
         </p>
-
-        <h2 id="mailgun">Configure Mailgun email sending</h2>
-        <p>
-          Quote email sending uses saved Mailgun project settings. The email
-          includes a short message, quote details, and the generated quote PDF as
-          an attachment. On successful send, Quotaurus stores recipient and
-          sent-date metadata on the quote.
-        </p>
-        <ul class="plain-list">
-          <li>Mailgun domain.</li>
-          <li>Mailgun region.</li>
-          <li>Mailgun API key.</li>
-          <li>From email and optional reply-to email.</li>
-        </ul>
 
         <h2 id="recurring">Recurring quote templates</h2>
         <p>
           Recurring templates can generate monthly draft quotes. Templates store
-          client, title, currency, system, revenue stream, PO number, notes, VAT
+          client, title, currency, system, revenue stream, PO number, notes, tax
           setting, status, line items, and billing day. Schedules support days 1
           to 28 and a last-day-of-month option.
         </p>
 
-        <h2 id="statuses">Quote statuses</h2>
+        <h2 id="permissions">Permissions and access</h2>
         <p>
-          Quotaurus currently uses Draft, Sent, Accepted, Rejected, Invoiceable,
-          Closed, and Cancelled. A quote marked Invoiceable requires a PO number.
+          RevFlow configuration includes permission modes for Anyone, Named
+          users, Project admins, and Jira admins. Admins can configure access for
+          setup, quote creation, editing, sending, deletion, and report viewing.
+        </p>
+        <p>
+          The app manifest requests Forge app storage, read Jira work, write Jira
+          work, and read Jira user scopes. Teams should review the Atlassian
+          install screen before rollout.
         </p>
 
-        <h2 id="permissions">Permissions and roles</h2>
+        <h2 id="import-export">Setup import and export</h2>
         <p>
-          The current app manifest requests Forge app storage, read Jira work,
-          write Jira work, and read Jira user scopes. Quotaurus does not publish
-          a separate public role model on this site; teams should review
-          Atlassian's install permission screen and their Jira project access
-          model before rollout.
+          RevFlow setup can be exported and imported as JSON. This is useful for
+          review, repeat configuration, and support conversations about project
+          setup.
+        </p>
+
+        <h2 id="dark-mode">Jira dark mode compatibility</h2>
+        <p>
+          RevFlow enables Atlassian Forge theme support and includes dark-mode
+          styles for panels, forms, tables, reports, status pills, overlays, and
+          setup wizard screens when Jira is using dark theme or match-system
+          theme behaviour.
         </p>
 
         <h2 id="troubleshooting">Troubleshooting</h2>
         <ul class="plain-list">
-          <li>If the Quotes page is not visible, confirm the app is installed on the correct Jira Cloud site.</li>
-          <li>If an issue panel does not show expected quotes, confirm the quote is open and linked to that issue.</li>
+          <li>If RevFlow is not visible, confirm the app is installed on the correct Jira Cloud site.</li>
+          <li>If setup is blocked, confirm the current user has project admin or configured setup permission.</li>
+          <li>If linked quote information is missing, confirm the quote is linked to the relevant Jira issue.</li>
+          <li>If missing coverage looks wrong, review configured issue types, sprint field, and work status mappings.</li>
           <li>If a PDF cannot be generated, include the quote reference and visible error in support email.</li>
-          <li>If email sending fails, check Mailgun domain, region, API key, and from email settings.</li>
-          <li>If a quote cannot be marked Invoiceable, check that a PO number has been added.</li>
+          <li>If email sending fails, check whether Mailgun or SendGrid is configured and enabled for the project.</li>
+          <li>If a quote cannot be marked Invoiceable, check whether required PO details have been added.</li>
         </ul>
       </section>
     </main>
@@ -140,7 +191,7 @@
     <footer class="site-footer">
       <div>
         <span class="footer-brand">Quotaurus</span>
-        <p>Quote workflows for Jira Cloud teams.</p>
+        <p>RevFlow: quote-to-delivery revenue control for Jira.</p>
       </div>
       <nav aria-label="Footer navigation">
         <a href="pricing.html">Marketplace</a>

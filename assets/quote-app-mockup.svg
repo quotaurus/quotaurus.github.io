@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" role="img" aria-labelledby="title desc">
-  <title id="title">Quotaurus interface mockup</title>
-  <desc id="desc">A mock Jira issue page with a Quote panel showing status, client, value, and line items.</desc>
+  <title id="title">RevFlow interface mockup</title>
+  <desc id="desc">A mock Jira issue page with a RevFlow panel showing quote status, client, value, and linked delivery context.</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#fffdf6"/>
@@ -40,15 +40,15 @@
   <rect x="74" y="512" width="296" height="18" rx="6" fill="#c1cac5"/>
 
   <rect x="584" y="136" width="258" height="392" rx="18" fill="url(#panel)"/>
-  <text x="616" y="184" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Quote</text>
-  <rect x="616" y="210" width="96" height="30" rx="15" fill="#f1b96f"/>
-  <text x="639" y="231" fill="#173d38" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800">Draft</text>
+  <text x="616" y="184" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">RevFlow</text>
+  <rect x="616" y="210" width="122" height="30" rx="15" fill="#f1b96f"/>
+  <text x="639" y="231" fill="#173d38" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800">Invoiceable</text>
 
   <text x="616" y="282" fill="#dbe6e2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Client</text>
   <text x="616" y="310" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">Acme Services</text>
 
-  <text x="616" y="360" fill="#dbe6e2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Quote value</text>
-  <text x="616" y="392" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="850">£12,450</text>
+  <text x="616" y="360" fill="#dbe6e2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Revenue value</text>
+  <text x="616" y="392" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="850">GBP 12,450</text>
 
   <rect x="616" y="426" width="194" height="1" fill="#5e908b"/>
   <rect x="616" y="452" width="160" height="18" rx="6" fill="#dbe6e2" opacity="0.84"/>

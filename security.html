@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Security and trust information for Quotaurus, including Forge storage, Jira scopes, data handling, Mailgun email sending, and support contacts."
+      content="Security and trust information for RevFlow by Quotaurus, including Forge storage, Jira scopes, configurable permissions, data handling, Mailgun, SendGrid, and support contacts."
     >
-    <title>Security & Trust | Quotaurus</title>
+    <title>Security & Trust | RevFlow by Quotaurus</title>
     <link rel="icon" href="assets/quotaurus-logo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -31,11 +31,11 @@
     <main>
       <section class="page-hero" aria-labelledby="security-title">
         <p class="eyebrow">Security & Trust</p>
-        <h1 id="security-title">Know what the app stores and where data flows.</h1>
+        <h1 id="security-title">Know what RevFlow stores and where data flows.</h1>
         <p>
-          Quotaurus handles commercial quote data, so the site documents the
-          current data model, Jira scopes, external email dependency, and support
-          contacts before installation.
+          RevFlow handles quote, delivery, and revenue-control data in Jira
+          Cloud. This page documents the current Forge architecture, scopes,
+          configurable permissions, optional email providers, and support routes.
         </p>
       </section>
 
@@ -43,76 +43,103 @@
         <article class="support-card">
           <h2>App hosting</h2>
           <p>
-            Quotaurus is built as an Atlassian Forge app for Jira Cloud. The app
-            exposes a Jira project page named Quotes and a Jira issue panel named
-            Quotes.
+            RevFlow is built as an Atlassian Forge app for Jira Cloud. The app
+            exposes a Jira project page named RevFlow and a Jira issue panel
+            named RevFlow.
           </p>
         </article>
 
         <article class="support-card">
           <h2>App storage</h2>
           <p>
-            Quote records, clients, metadata, recurring templates, history, and
-            settings are stored through Atlassian Forge app storage APIs used by
-            the app.
+            Quote records, clients, products, revenue streams, recurring
+            templates, history, exchange rates, report email settings, and
+            configuration are stored using Atlassian Forge app storage APIs.
           </p>
         </article>
 
         <article class="support-card">
-          <h2>Website cookies</h2>
+          <h2>Configurable access</h2>
           <p>
-            The public website does not currently set analytics cookies,
-            advertising cookies, account registration cookies, or contact-form
-            cookies.
+            RevFlow supports permission modes for Anyone, Named users, Project
+            admins, and Jira admins across setup, quote actions, deletion,
+            sending, and report viewing.
           </p>
         </article>
 
         <article class="support-card wide">
           <h2>Requested Jira scopes</h2>
           <ul class="plain-list">
-            <li><code>storage:app</code> for app data storage.</li>
-            <li><code>read:jira-work</code> to read Jira work context.</li>
+            <li><code>storage:app</code> for Forge app data storage.</li>
+            <li><code>read:jira-work</code> to read Jira project, issue, status, sprint, estimate, and work context.</li>
             <li><code>write:jira-work</code> to support Jira work interactions used by the app.</li>
-            <li><code>read:jira-user</code> to read Jira user details where needed, such as prepared-by information.</li>
+            <li><code>read:jira-user</code> to read Jira user details where needed, such as prepared-by, sender, subscriber, and permission workflows.</li>
           </ul>
         </article>
 
         <article class="support-card">
-          <h2>External email flow</h2>
+          <h2>Optional email providers</h2>
           <p>
-            Quote email sending uses Mailgun when configured. The quote email
-            flow sends recipient details, email content, and the generated quote
-            PDF to the configured Mailgun endpoint.
+            Quote email sending is optional. The current provider choices are
+            None, Mailgun, and SendGrid. PDF generation does not require email
+            sending to be configured.
           </p>
         </article>
       </section>
 
       <section class="policy-layout" aria-label="Security details">
-        <h2>Quote data processed by the app</h2>
+        <h2>Data processed by RevFlow</h2>
         <p>
-          Quotaurus may process client names, recipient names and emails, quote
-          titles, quote values, products, rates, quantities, VAT settings,
-          currency, PO numbers, systems, revenue streams, notes, forecasted
+          RevFlow may process client names, recipient names and emails, quote
+          titles, quote values, products, rates, quantities, tax settings,
+          currencies, PO numbers, systems, revenue streams, notes, forecasted
           completion dates, linked Jira issue keys, generated PDF content,
-          quote status, version history, recurring templates, and sent-email
-          metadata.
+          quote status, version history, recurring templates, report settings,
+          billing export settings, and setup configuration.
+        </p>
+        <p>
+          RevFlow may read Jira project and issue keys, summaries, issue types,
+          statuses, sprint metadata, parent or epic relationships, estimates,
+          logged time, and Jira user account identifiers or display names needed
+          for the workflow.
         </p>
 
         <h2>Data outside Atlassian</h2>
         <p>
-          The core quote workflow is stored through Forge app storage. When
-          Mailgun sending is configured and a user sends a quote email, quote
-          email content and the PDF attachment are sent to Mailgun for delivery.
-          Support emails sent to Quotaurus are processed by the email provider
-          used for the relevant support mailbox.
+          The core quote and configuration workflow is stored through Forge app
+          storage. When email sending is configured and a user sends a quote
+          email, recipient details, email content, and the generated quote PDF
+          are sent to the configured Mailgun or SendGrid endpoint for delivery.
+        </p>
+        <p>
+          The production app egress allow-list is restricted to Mailgun US,
+          Mailgun EU, and SendGrid for backend email delivery. Generic custom
+          HTTP email endpoints are not enabled in the productised provider list.
+        </p>
+
+        <h2>Website cookies</h2>
+        <p>
+          The public website does not currently set analytics cookies,
+          advertising cookies, account registration cookies, or contact-form
+          cookies.
         </p>
 
         <h2>Data retention and deletion</h2>
         <p>
-          The public site does not publish an automated retention schedule.
-          Contact Quotaurus for access, correction, deletion, or uninstall data
-          questions. Include the Atlassian site URL and enough detail to locate
-          the relevant records.
+          RevFlow data remains in Forge app storage until users delete it, the
+          app is uninstalled, or a retention or deletion process is requested
+          and completed. Contact Quotaurus for access, correction, deletion, or
+          uninstall data questions. Include the Atlassian site URL and enough
+          detail to locate the relevant records.
+        </p>
+
+        <h2>Subprocessors</h2>
+        <p>
+          Atlassian provides Jira Cloud and Forge. Mailgun or SendGrid are
+          involved only when quote email sending is configured and used.
+          Support emails sent to Quotaurus are processed by the provider used
+          for the relevant mailbox. The app may load Atlassian JSM helpdesk
+          widget assets for support inside the project page.
         </p>
 
         <h2>Backups and incident response</h2>
@@ -120,21 +147,13 @@
           Backup, disaster recovery, and incident response details should be
           confirmed during procurement or Marketplace security review. Security
           reports can be sent to
-          <a href="mailto:support@quotaurus.com?subject=Security%20issue%20for%20Quotaurus">support@quotaurus.com</a>.
-        </p>
-
-        <h2>Subprocessors</h2>
-        <p>
-          Atlassian provides the Jira Cloud and Forge platform used by the app.
-          Mailgun is involved only when quote email sending is configured and
-          used. Additional support-mailbox providers may process support
-          messages sent by email.
+          <a href="mailto:support@quotaurus.com?subject=Security%20issue%20for%20RevFlow">support@quotaurus.com</a>.
         </p>
 
         <h2>Security contact</h2>
         <p>
           For vulnerability reports, email
-          <a href="mailto:support@quotaurus.com?subject=Security%20issue%20for%20Quotaurus">support@quotaurus.com</a>
+          <a href="mailto:support@quotaurus.com?subject=Security%20issue%20for%20RevFlow">support@quotaurus.com</a>
           with a clear subject line. Avoid public disclosure until the issue has
           been reviewed.
         </p>
@@ -144,7 +163,7 @@
     <footer class="site-footer">
       <div>
         <span class="footer-brand">Quotaurus</span>
-        <p>Quote workflows for Jira Cloud teams.</p>
+        <p>RevFlow: quote-to-delivery revenue control for Jira.</p>
       </div>
       <nav aria-label="Footer navigation">
         <a href="pricing.html">Marketplace</a>
