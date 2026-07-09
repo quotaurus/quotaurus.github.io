@@ -10,6 +10,27 @@
       <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#14211e" flood-opacity="0.16"/>
     </filter>
   </defs>
+  <style>
+    @keyframes setup-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.88; transform: scale(1.018); }
+    }
+
+    @keyframes setup-slide {
+      from { opacity: 0.25; transform: translateX(-16px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .active-step,
+    .finish-button { animation: setup-pulse 4s ease-in-out infinite; transform-origin: center; }
+    .feature-flag { animation: setup-slide 800ms ease both; }
+    .feature-flag:nth-of-type(2) { animation-delay: 120ms; }
+    .feature-flag:nth-of-type(3) { animation-delay: 240ms; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
 
   <rect width="920" height="620" rx="32" fill="url(#bg)"/>
   <rect x="38" y="38" width="844" height="544" rx="22" fill="#ffffff" filter="url(#shadow)"/>
@@ -25,7 +46,7 @@
     <text x="112" y="217" fill="#236c69">Welcome</text>
     <rect x="96" y="238" width="134" height="28" rx="14" fill="#e9f2f1"/>
     <text x="112" y="257" fill="#236c69">Jira fields</text>
-    <rect x="96" y="278" width="146" height="30" rx="15" fill="#173d38"/>
+    <rect class="active-step" x="96" y="278" width="146" height="30" rx="15" fill="#173d38"/>
     <text x="112" y="298" fill="#fffdf6">Statuses &amp; types</text>
     <rect x="96" y="320" width="116" height="28" rx="14" fill="#f3e4d0"/>
     <text x="112" y="339" fill="#8a551d">Company</text>
@@ -61,14 +82,14 @@
   <rect x="304" y="374" width="522" height="94" rx="14" fill="#f6f8fb" stroke="#d9e4e1"/>
   <text x="328" y="408" fill="#173d38" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="850">Feature flags</text>
   <g font-family="Inter, Arial, sans-serif" font-size="13" font-weight="760">
-    <rect x="328" y="428" width="132" height="24" rx="12" fill="#e9f2f1"/>
+    <rect class="feature-flag" x="328" y="428" width="132" height="24" rx="12" fill="#e9f2f1"/>
     <text x="344" y="445" fill="#236c69">Recurring quotes</text>
-    <rect x="474" y="428" width="142" height="24" rx="12" fill="#e9f2f1"/>
+    <rect class="feature-flag" x="474" y="428" width="142" height="24" rx="12" fill="#e9f2f1"/>
     <text x="490" y="445" fill="#236c69">Coverage checks</text>
-    <rect x="630" y="428" width="126" height="24" rx="12" fill="#e9f2f1"/>
+    <rect class="feature-flag" x="630" y="428" width="126" height="24" rx="12" fill="#e9f2f1"/>
     <text x="646" y="445" fill="#236c69">Billing exports</text>
   </g>
 
-  <rect x="650" y="504" width="176" height="42" rx="9" fill="#173d38"/>
+  <rect class="finish-button" x="650" y="504" width="176" height="42" rx="9" fill="#173d38"/>
   <text x="696" y="531" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="850">Finish setup</text>
 </svg>

@@ -14,6 +14,26 @@
       <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#14211e" flood-opacity="0.18"/>
     </filter>
   </defs>
+  <style>
+    @keyframes status-breathe {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.86; transform: scale(1.025); }
+    }
+
+    @keyframes line-glow {
+      0%, 100% { opacity: 0.62; }
+      50% { opacity: 1; }
+    }
+
+    .status-pill { animation: status-breathe 3.8s ease-in-out infinite; transform-origin: center; }
+    .data-line { animation: line-glow 4.2s ease-in-out infinite; }
+    .data-line:nth-of-type(2) { animation-delay: 0.45s; }
+    .data-line:nth-of-type(3) { animation-delay: 0.9s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
 
   <rect width="920" height="620" rx="32" fill="url(#bg)"/>
   <rect x="34" y="34" width="852" height="552" rx="22" fill="#fffdf6" filter="url(#shadow)"/>
@@ -41,7 +61,7 @@
 
   <rect x="584" y="136" width="258" height="392" rx="18" fill="url(#panel)"/>
   <text x="616" y="184" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">RevFlow</text>
-  <rect x="616" y="210" width="122" height="30" rx="15" fill="#f1b96f"/>
+  <rect class="status-pill" x="616" y="210" width="122" height="30" rx="15" fill="#f1b96f"/>
   <text x="639" y="231" fill="#173d38" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800">Invoiceable</text>
 
   <text x="616" y="282" fill="#dbe6e2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Client</text>
@@ -51,6 +71,6 @@
   <text x="616" y="392" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="850">GBP 12,450</text>
 
   <rect x="616" y="426" width="194" height="1" fill="#5e908b"/>
-  <rect x="616" y="452" width="160" height="18" rx="6" fill="#dbe6e2" opacity="0.84"/>
-  <rect x="616" y="486" width="118" height="18" rx="6" fill="#dbe6e2" opacity="0.64"/>
+  <rect class="data-line" x="616" y="452" width="160" height="18" rx="6" fill="#dbe6e2" opacity="0.84"/>
+  <rect class="data-line" x="616" y="486" width="118" height="18" rx="6" fill="#dbe6e2" opacity="0.64"/>
 </svg>

@@ -14,6 +14,26 @@
       <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#000000" flood-opacity="0.34"/>
     </filter>
   </defs>
+  <style>
+    @keyframes dark-status {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.84; transform: scale(1.03); }
+    }
+
+    @keyframes theme-line {
+      0%, 100% { opacity: 0.58; }
+      50% { opacity: 0.95; }
+    }
+
+    .dark-status { animation: dark-status 3.7s ease-in-out infinite; transform-origin: center; }
+    .theme-line { animation: theme-line 4.4s ease-in-out infinite; }
+    .theme-line:nth-of-type(2) { animation-delay: 0.35s; }
+    .theme-line:nth-of-type(3) { animation-delay: 0.7s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
 
   <rect width="920" height="620" rx="32" fill="url(#bg)"/>
   <rect x="38" y="38" width="844" height="544" rx="22" fill="#111c1a" filter="url(#shadow)"/>
@@ -33,15 +53,15 @@
   <text x="124" y="282" fill="#cde0dd" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800">In Progress</text>
   <rect x="250" y="262" width="130" height="30" rx="15" fill="#26384d"/>
   <text x="270" y="282" fill="#cfe0f2" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800">Sprint 42</text>
-  <rect x="104" y="338" width="364" height="14" rx="7" fill="#42514d"/>
-  <rect x="104" y="374" width="318" height="14" rx="7" fill="#34433f"/>
-  <rect x="104" y="410" width="344" height="14" rx="7" fill="#34433f"/>
+  <rect class="theme-line" x="104" y="338" width="364" height="14" rx="7" fill="#42514d"/>
+  <rect class="theme-line" x="104" y="374" width="318" height="14" rx="7" fill="#34433f"/>
+  <rect class="theme-line" x="104" y="410" width="344" height="14" rx="7" fill="#34433f"/>
   <rect x="104" y="466" width="164" height="34" rx="9" fill="#233f3b"/>
   <text x="128" y="488" fill="#b8e2da" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="850">Linked quote</text>
 
   <rect x="564" y="142" width="282" height="392" rx="18" fill="url(#panel)"/>
   <text x="596" y="188" fill="#fffdf6" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850">RevFlow</text>
-  <rect x="596" y="214" width="104" height="30" rx="15" fill="#f1b96f"/>
+  <rect class="dark-status" x="596" y="214" width="104" height="30" rx="15" fill="#f1b96f"/>
   <text x="619" y="234" fill="#173d38" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="850">Accepted</text>
 
   <text x="596" y="292" fill="#cde0dd" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="750">Client</text>

@@ -26,6 +26,48 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.4rem) rotateX(4deg) rotateZ(-1deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0) rotateZ(0);
+  }
+}
+
+@keyframes hero-float {
+  from {
+    transform: translateY(0) rotateZ(0);
+  }
+  to {
+    transform: translateY(-0.7rem) rotateZ(0.35deg);
+  }
+}
+
+@keyframes trust-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.65rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 body {
   margin: 0;
   color: var(--ink);
@@ -86,6 +128,7 @@ img {
 
 .nav-links a {
   padding-block: 0.25rem;
+  transition: color 180ms ease, transform 180ms ease;
 }
 
 .nav-links .nav-cta {
@@ -100,6 +143,11 @@ img {
 .nav-links a:focus-visible,
 .nav-links a[aria-current="page"] {
   color: var(--ink);
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  transform: translateY(-1px);
 }
 
 .product-hero {
@@ -195,6 +243,12 @@ h3 {
   padding: 0.85rem 1.1rem;
   font: inherit;
   font-weight: 830;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
 }
 
 .button.primary {
@@ -238,6 +292,7 @@ h3 {
   width: min(38rem, 100%);
   border-radius: 14px;
   box-shadow: 0 2rem 5rem rgba(4, 12, 10, 0.34);
+  transform-origin: 50% 60%;
 }
 
 .intro-band,
@@ -287,6 +342,10 @@ h3 {
   font-weight: 820;
   line-height: 1.35;
   text-align: center;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
 }
 
 .intro-band p:last-child,
@@ -337,6 +396,10 @@ h3 {
   border-radius: 8px;
   background: var(--paper-strong);
   box-shadow: 0 1rem 2.5rem rgba(24, 34, 30, 0.06);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .feature-card {
@@ -391,6 +454,10 @@ h3 {
   border-radius: 8px;
   padding: 1.2rem;
   background: var(--paper-strong);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .visual-band {
@@ -412,6 +479,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 7px;
   background: var(--paper-strong);
+  transition: transform 260ms ease;
 }
 
 .tour-shot {
@@ -458,6 +526,10 @@ h3 {
   padding: 1.25rem;
   background: var(--paper-strong);
   box-shadow: 0 1rem 2.5rem rgba(24, 34, 30, 0.06);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .sample-pdf-header {
@@ -782,6 +854,139 @@ h3 {
 .trademark-note {
   grid-column: 1 / -1;
   max-width: 58rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .product-hero .eyebrow,
+  .product-hero h1,
+  .hero-text,
+  .hero-actions,
+  .button-note {
+    animation: hero-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .product-hero h1 {
+    animation-delay: 80ms;
+  }
+
+  .hero-text {
+    animation-delay: 160ms;
+  }
+
+  .hero-actions {
+    animation-delay: 240ms;
+  }
+
+  .button-note {
+    animation-delay: 320ms;
+  }
+
+  .hero-visual img {
+    animation:
+      hero-card-in 850ms cubic-bezier(0.16, 1, 0.3, 1) 180ms both,
+      hero-float 7s ease-in-out 1.2s infinite alternate;
+  }
+
+  .trust-strip span {
+    animation: trust-in 520ms ease both;
+  }
+
+  .trust-strip span:nth-child(1) {
+    animation-delay: 80ms;
+  }
+
+  .trust-strip span:nth-child(2) {
+    animation-delay: 150ms;
+  }
+
+  .trust-strip span:nth-child(3) {
+    animation-delay: 220ms;
+  }
+
+  .trust-strip span:nth-child(4) {
+    animation-delay: 290ms;
+  }
+
+  .feature-card:hover,
+  .feature-card:focus-within,
+  .tour-shot:hover,
+  .tour-shot:focus-within,
+  .visual-card:hover,
+  .visual-card:focus-within,
+  .use-case-grid article:hover,
+  .faq-grid article:hover,
+  .contact-card:hover,
+  .support-card:hover,
+  .sample-pdf:hover,
+  .sample-email:hover,
+  .link-cards a:hover,
+  .link-cards a:focus-visible {
+    border-color: rgba(35, 108, 105, 0.32);
+    box-shadow: 0 1.35rem 3rem rgba(24, 34, 30, 0.11);
+    transform: translateY(-0.25rem);
+  }
+
+  .visual-card:hover img,
+  .visual-card:focus-within img {
+    transform: scale(1.025);
+  }
+
+  .motion-ready .intro-band,
+  .motion-ready .section-heading,
+  .motion-ready .feature-card,
+  .motion-ready .tour-shot,
+  .motion-ready .visual-card,
+  .motion-ready .use-case-grid article,
+  .motion-ready .sample-pdf,
+  .motion-ready .sample-email,
+  .motion-ready .comparison-band .table-wrap,
+  .motion-ready .roi-band > *,
+  .motion-ready .trust-band .link-cards a,
+  .motion-ready .faq-grid article,
+  .motion-ready .marketplace-band > *,
+  .motion-ready .content-grid > article,
+  .motion-ready .policy-layout > *,
+  .motion-ready .doc-nav a {
+    opacity: 0;
+    transform: translateY(1.1rem);
+    transition:
+      opacity 520ms ease,
+      transform 520ms cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 180ms ease,
+      box-shadow 180ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .motion-ready .intro-band.is-visible,
+  .motion-ready .section-heading.is-visible,
+  .motion-ready .feature-card.is-visible,
+  .motion-ready .tour-shot.is-visible,
+  .motion-ready .visual-card.is-visible,
+  .motion-ready .use-case-grid article.is-visible,
+  .motion-ready .sample-pdf.is-visible,
+  .motion-ready .sample-email.is-visible,
+  .motion-ready .comparison-band .table-wrap.is-visible,
+  .motion-ready .roi-band > *.is-visible,
+  .motion-ready .trust-band .link-cards a.is-visible,
+  .motion-ready .faq-grid article.is-visible,
+  .motion-ready .marketplace-band > *.is-visible,
+  .motion-ready .content-grid > article.is-visible,
+  .motion-ready .policy-layout > *.is-visible,
+  .motion-ready .doc-nav a.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 
 @media (max-width: 920px) {

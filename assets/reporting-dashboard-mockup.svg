@@ -10,6 +10,33 @@
       <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#14211e" flood-opacity="0.17"/>
     </filter>
   </defs>
+  <style>
+    @keyframes bar-rise {
+      from { transform: scaleY(0.18); opacity: 0.55; }
+      to { transform: scaleY(1); opacity: 1; }
+    }
+
+    @keyframes coverage-highlight {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.76; }
+    }
+
+    .report-bar {
+      animation: bar-rise 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+      transform-box: fill-box;
+      transform-origin: bottom;
+    }
+
+    .report-bar:nth-of-type(2) { animation-delay: 120ms; }
+    .report-bar:nth-of-type(3) { animation-delay: 240ms; }
+    .report-bar:nth-of-type(4) { animation-delay: 360ms; }
+    .report-bar:nth-of-type(5) { animation-delay: 480ms; }
+    .coverage-row { animation: coverage-highlight 4.2s ease-in-out infinite; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
 
   <rect width="920" height="620" rx="32" fill="url(#bg)"/>
   <rect x="38" y="38" width="844" height="544" rx="22" fill="#ffffff" filter="url(#shadow)"/>
@@ -43,22 +70,22 @@
   <text x="98" y="314" fill="#173d38" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">Quote value over time</text>
   <line x1="104" y1="464" x2="398" y2="464" stroke="#d9e4e1" stroke-width="2"/>
   <line x1="104" y1="346" x2="104" y2="464" stroke="#d9e4e1" stroke-width="2"/>
-  <rect x="132" y="410" width="30" height="54" rx="6" fill="#236c69"/>
-  <rect x="178" y="378" width="30" height="86" rx="6" fill="#315d92"/>
-  <rect x="224" y="394" width="30" height="70" rx="6" fill="#bf7d2e"/>
-  <rect x="270" y="356" width="30" height="108" rx="6" fill="#173d38"/>
-  <rect x="316" y="382" width="30" height="82" rx="6" fill="#b95f52"/>
+  <rect class="report-bar" x="132" y="410" width="30" height="54" rx="6" fill="#236c69"/>
+  <rect class="report-bar" x="178" y="378" width="30" height="86" rx="6" fill="#315d92"/>
+  <rect class="report-bar" x="224" y="394" width="30" height="70" rx="6" fill="#bf7d2e"/>
+  <rect class="report-bar" x="270" y="356" width="30" height="108" rx="6" fill="#173d38"/>
+  <rect class="report-bar" x="316" y="382" width="30" height="82" rx="6" fill="#b95f52"/>
 
   <rect x="458" y="276" width="364" height="226" rx="16" fill="#fffdf6" stroke="#d9e4e1"/>
   <text x="482" y="314" fill="#173d38" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">Current sprint coverage</text>
   <g font-family="Inter, Arial, sans-serif" font-size="13" font-weight="760">
-    <rect x="482" y="346" width="316" height="34" rx="8" fill="#f6f8fb"/>
+    <rect class="coverage-row" x="482" y="346" width="316" height="34" rx="8" fill="#f6f8fb"/>
     <text x="500" y="368" fill="#17201d">STORY-214</text>
     <text x="620" y="368" fill="#5b6661">No linked quote</text>
-    <rect x="482" y="392" width="316" height="34" rx="8" fill="#f6f8fb"/>
+    <rect class="coverage-row" x="482" y="392" width="316" height="34" rx="8" fill="#f6f8fb"/>
     <text x="500" y="414" fill="#17201d">TASK-088</text>
     <text x="620" y="414" fill="#5b6661">No linked quote</text>
-    <rect x="482" y="438" width="316" height="34" rx="8" fill="#f6f8fb"/>
+    <rect class="coverage-row" x="482" y="438" width="316" height="34" rx="8" fill="#f6f8fb"/>
     <text x="500" y="460" fill="#17201d">BUG-617</text>
     <text x="620" y="460" fill="#5b6661">Review coverage</text>
   </g>
