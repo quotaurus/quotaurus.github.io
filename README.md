@@ -63,7 +63,6 @@ is available.
 - `support.html` - support and severity guide
 - `contact.html` - contact routes
 - `privacy-policy.html` and `cookie-policy.html`
-- `changelog.html` - public changelog and roadmap notes
 
 ## GitHub Pages
 
