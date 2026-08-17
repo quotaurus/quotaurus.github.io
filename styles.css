@@ -1303,3 +1303,97 @@ h3 {
     overflow-x: auto;
   }
 }
+
+/* ============================================================
+   Quotaurus product family + launch badges
+   ============================================================ */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #eef6f4;
+  font-size: 0.76rem;
+  font-weight: 830;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.hero-badge .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #7fe3c0;
+  box-shadow: 0 0 0 0.25rem rgba(127, 227, 192, 0.25);
+}
+
+.products-band {
+  padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 5rem);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper-strong);
+}
+.products-band .section-heading {
+  max-width: 48rem;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.product-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper-strong);
+  box-shadow: 0 1rem 2.5rem rgba(24, 34, 30, 0.06);
+  padding: 1.5rem;
+}
+.product-item.is-upcoming {
+  background: var(--paper);
+  border-style: dashed;
+  box-shadow: none;
+}
+.product-item h3 {
+  margin: 0.15rem 0 0;
+  font-size: 1.35rem;
+  color: var(--forest);
+}
+.product-item p {
+  margin: 0;
+  color: var(--muted);
+}
+.product-item .button,
+.product-item .text-link {
+  margin-top: auto;
+}
+.launch-badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.launch-badge.live {
+  background: rgba(35, 108, 105, 0.14);
+  color: var(--teal);
+}
+.launch-badge.soon {
+  background: rgba(191, 125, 46, 0.16);
+  color: var(--amber);
+}
+@media (max-width: 720px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="RevFlow by Quotaurus is quote-to-delivery revenue control for Jira Cloud: create quotes from Jira work, link revenue to issues, catch missing quote coverage, report on WIP and invoiceable value, and configure the workflow for each project."
+      content="RevFlow by Quotaurus is quote-to-delivery revenue control for Jira Cloud. Quote work, link it to Jira issues, catch unquoted delivery, and report on WIP and invoiceable value — without leaving Jira. Now live on the Atlassian Marketplace, free for up to 10 users."
     >
-    <title>RevFlow by Quotaurus - Quote-to-Delivery Revenue Control for Jira</title>
+    <title>RevFlow by Quotaurus — Quote-to-Delivery Revenue Control for Jira</title>
     <link rel="icon" href="assets/quotaurus-logo.png" type="image/png">
     <link rel="preload" as="image" href="assets/quote-app-mockup.svg">
     <link rel="stylesheet" href="styles.css">
@@ -20,7 +20,7 @@
         "alternateName": "RevFlow for Jira",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Jira Cloud",
-        "description": "Quote-to-delivery revenue control for Jira Cloud teams, including quote creation, issue linking, configurable setup, revenue reporting, billing exports, recurring quote drafts, and Jira dark mode compatibility.",
+        "description": "Quote-to-delivery revenue control for Jira Cloud teams: quote creation, issue linking, configurable setup, revenue and coverage reporting, billing exports, recurring quote drafts, and Jira dark mode compatibility. Live on the Atlassian Marketplace.",
         "url": "https://quotaurus.com/",
         "publisher": {
           "@type": "Organization",
@@ -29,8 +29,10 @@
         },
         "offers": {
           "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
           "availability": "https://schema.org/OnlineOnly",
-          "url": "https://quotaurus.com/pricing.html"
+          "url": "https://marketplace.atlassian.com/apps/2187659327/revflow-for-jira"
         }
       }
     </script>
@@ -44,15 +46,23 @@
             "name": "Is RevFlow for Jira Cloud?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. RevFlow is built for Jira Cloud and runs inside Jira project pages and issue panels."
+              "text": "Yes. RevFlow is a native Atlassian Forge app for Jira Cloud and runs inside Jira project pages and issue panels."
             }
           },
           {
             "@type": "Question",
-            "name": "Who is Quotaurus?",
+            "name": "Who builds RevFlow?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Quotaurus is the company behind RevFlow. RevFlow is the Jira app."
+              "text": "Quotaurus. RevFlow for Jira is our first product, and more revenue tools for Atlassian teams are on the way."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a free version of RevFlow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. RevFlow is free for up to 10 users, with a 30-day free trial on paid tiers. Billing runs through the Atlassian Marketplace."
             }
           },
           {
@@ -68,7 +78,7 @@
             "name": "Can RevFlow send quote emails?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Quote email sending is optional and can be configured with Mailgun or SendGrid. Teams can still generate PDFs without enabling email sending."
+              "text": "Quote email sending is optional and can be configured with Mailgun or SendGrid. You can also generate PDFs without enabling email at all."
             }
           }
         ]
@@ -81,34 +91,35 @@
         <img class="brand-logo" src="assets/quotaurus-logo.png" alt="Quotaurus">
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a aria-current="page" href="index.html">Product</a>
+        <a aria-current="page" href="index.html">RevFlow</a>
         <a href="use-cases.html">Use cases</a>
         <a href="index.html#product-tour">Tour</a>
         <a href="pricing.html">Pricing</a>
         <a href="docs.html">Docs</a>
         <a href="security.html">Security</a>
         <a href="support.html">Support</a>
-        <a class="nav-cta" href="pricing.html#marketplace-access">Marketplace</a>
+        <a class="nav-cta" href="https://marketplace.atlassian.com/apps/2187659327/revflow-for-jira" target="_blank" rel="noopener">Try free</a>
       </nav>
     </header>
 
     <main>
       <section class="product-hero" aria-labelledby="hero-title">
         <div class="hero-copy">
+          <span class="hero-badge"><span class="dot" aria-hidden="true"></span> Now live on the Atlassian Marketplace</span>
           <p class="eyebrow">RevFlow by Quotaurus</p>
-          <h1 id="hero-title">Quote-to-delivery revenue control for Jira.</h1>
+          <h1 id="hero-title">Turn Jira delivery into revenue you control.</h1>
           <p class="hero-text">
-            RevFlow helps Jira Cloud teams turn delivery work into controlled
-            revenue: create quotes, link them to Jira issues, report on WIP and
-            invoiceable value, catch unquoted sprint work, and configure the
-            workflow to match each project.
+            RevFlow gives Jira Cloud teams one place to quote work, link it to
+            the issues that deliver it, and see WIP, invoiceable value, and
+            unquoted work as it happens. No spreadsheets. No separate CPQ. No
+            revenue slipping through the cracks.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="pricing.html#marketplace-access">Get Marketplace access</a>
-            <a class="button secondary" href="#product-tour">See product tour</a>
-            <a class="button secondary" href="docs.html#setup-wizard">Setup guide</a>
+            <a class="button primary" href="https://marketplace.atlassian.com/apps/2187659327/revflow-for-jira" target="_blank" rel="noopener">Try RevFlow free</a>
+            <a class="button secondary" href="#product-tour">Take the tour</a>
+            <a class="button secondary" href="docs.html#setup-wizard">Read the setup guide</a>
           </div>
-          <p class="button-note">Requires Jira Cloud admin permission to install.</p>
+          <p class="button-note">Free for up to 10 users · 30-day trial on paid tiers · Installs in minutes from the Atlassian Marketplace.</p>
         </div>
 
         <div class="hero-visual" aria-label="RevFlow interface preview">
@@ -120,87 +131,123 @@
       </section>
 
       <section class="trust-strip" aria-label="Trust highlights">
-        <span>Forge app for Jira Cloud</span>
-        <span>Guided setup wizard for project admins</span>
-        <span>Compatible with Jira dark mode</span>
-        <span>Email support from Quotaurus</span>
+        <span>Live on the Atlassian Marketplace</span>
+        <span>Built natively on Atlassian Forge</span>
+        <span>Guided setup in minutes</span>
+        <span>Free for up to 10 users</span>
+      </section>
+
+      <section class="products-band" id="products" aria-labelledby="products-title">
+        <div class="section-heading">
+          <p class="section-kicker">From Quotaurus</p>
+          <h2 id="products-title">The first of a family of revenue tools for Atlassian teams.</h2>
+          <p>
+            Quotaurus builds commercial-control software for teams that run their
+            business in Jira. RevFlow is our first product — live today. More are
+            on the way.
+          </p>
+        </div>
+        <div class="product-list">
+          <article class="product-item">
+            <span class="launch-badge live">● Live now</span>
+            <h3>RevFlow for Jira</h3>
+            <p>
+              Quote-to-delivery revenue control for Jira Cloud. Quote the work,
+              link it to the issues that deliver it, and report on WIP,
+              invoiceable value, and missing quote coverage — all inside Jira.
+            </p>
+            <a class="button dark" href="https://marketplace.atlassian.com/apps/2187659327/revflow-for-jira" target="_blank" rel="noopener">View on the Marketplace</a>
+          </article>
+          <article class="product-item is-upcoming">
+            <span class="launch-badge soon">In the works</span>
+            <h3>More coming</h3>
+            <p>
+              We're building the next Quotaurus product for Atlassian teams.
+              Want a say in what we build next, or early access when it lands?
+            </p>
+            <a class="text-link" href="contact.html">Talk to us</a>
+          </article>
+        </div>
       </section>
 
       <section class="intro-band" aria-labelledby="problem-title">
         <div>
           <p class="section-kicker">The problem</p>
-          <h2 id="problem-title">Revenue control breaks when quotes drift away from Jira delivery work.</h2>
+          <h2 id="problem-title">Your scope lives in Jira. Your revenue lives everywhere else.</h2>
         </div>
         <p>
-          Jira holds the scope, but commercial context often lives in
-          spreadsheets, PDFs, email threads, and finance exports. RevFlow keeps
-          quote records, issue links, status, forecast dates, PO numbers, line
-          items, and reporting close to the work that drives the revenue.
+          Jira holds the work, but the commercial story is scattered across
+          spreadsheets, PDFs, email threads, and finance exports. By the time
+          numbers reconcile, the money's already been decided. RevFlow keeps
+          quotes, issue links, statuses, forecast dates, PO numbers, line items,
+          and reporting right next to the work that earns them — so nothing gets
+          lost between delivery and the invoice.
         </p>
       </section>
 
       <section class="feature-grid" aria-labelledby="story-title">
         <div class="section-heading">
           <p class="section-kicker">How it works</p>
-          <h2 id="story-title">Create, configure, report, and repeat from inside Jira.</h2>
+          <h2 id="story-title">Quote, configure, report, repeat — all inside Jira.</h2>
         </div>
 
         <article class="feature-card">
           <span class="feature-number">01</span>
-          <h3>Start from Jira work</h3>
+          <h3>Start from the work itself</h3>
           <p>
-            Create and manage quotes from the RevFlow project page or the Jira
-            issue panel, then keep linked quote references visible beside the
+            Build and manage quotes straight from the RevFlow project page or the
+            Jira issue panel, and keep the linked quote in view right beside the
             delivery scope.
           </p>
         </article>
 
         <article class="feature-card">
           <span class="feature-number">02</span>
-          <h3>Use a guided setup wizard</h3>
+          <h3>Set it up once, your way</h3>
           <p>
-            Project admins can map Jira fields, statuses, issue types, currency,
-            tax, quote items, clients, revenue streams, email options, and access
-            rules before rollout.
+            A guided wizard maps Jira fields, statuses, issue types, currency,
+            tax, quote items, clients, revenue streams, email, and access rules
+            to how your team already works — no raw field IDs, no guesswork.
           </p>
         </article>
 
         <article class="feature-card">
           <span class="feature-number">03</span>
-          <h3>Track quote-to-delivery status</h3>
+          <h3>Track every quote to delivery</h3>
           <p>
-            Configure quote statuses and work buckets for order, WIP,
-            invoiceable, closed, and lost value so reports reflect your real
-            Jira workflow.
+            Map your quote statuses and work buckets — order, WIP, invoiceable,
+            closed, lost — so every report mirrors the real Jira workflow instead
+            of a finance team's best guess.
           </p>
         </article>
 
         <article class="feature-card">
           <span class="feature-number">04</span>
-          <h3>Spot missing quote coverage</h3>
+          <h3>Catch revenue before it leaks</h3>
           <p>
-            Reporting highlights current and next sprint work that has no quote
-            coverage, helping delivery teams catch revenue risk before work
-            moves too far.
+            RevFlow flags current and next-sprint work with no quote attached, so
+            you spot unbilled delivery while there's still time to do something
+            about it.
           </p>
         </article>
 
         <article class="feature-card">
           <span class="feature-number">05</span>
-          <h3>Generate PDFs and optional emails</h3>
+          <h3>Send polished quotes in a click</h3>
           <p>
-            Generate client-facing quote PDFs. If email sending is enabled,
-            RevFlow can use Mailgun or SendGrid and store recipient and sent-date
-            metadata on the quote.
+            Generate client-ready quote PDFs on demand. Turn on optional Mailgun
+            or SendGrid sending and RevFlow records the recipient and sent date
+            right on the quote.
           </p>
         </article>
 
         <article class="feature-card">
           <span class="feature-number">06</span>
-          <h3>Repeat recurring work</h3>
+          <h3>Put retainers on autopilot</h3>
           <p>
-            Create monthly draft quotes from recurring templates for retainers,
-            subscriptions, support packages, and other scheduled service work.
+            Spin up monthly draft quotes from recurring templates for retainers,
+            subscriptions, support packages, and any other work that repeats like
+            clockwork.
           </p>
         </article>
       </section>
@@ -208,38 +255,38 @@
       <section class="product-tour" id="product-tour" aria-labelledby="tour-title">
         <div class="section-heading">
           <p class="section-kicker">Product tour</p>
-          <h2 id="tour-title">Built for the Jira teams who need commercial visibility without leaving Jira.</h2>
+          <h2 id="tour-title">Commercial visibility for the teams who live in Jira.</h2>
         </div>
         <div class="tour-grid">
           <article class="tour-shot">
             <span>First run</span>
-            <h3>Setup wizard before wider rollout.</h3>
-            <p>Admins are guided through field mappings, statuses, company details, currencies, quote items, clients, features, email, and access.</p>
+            <h3>Set up before you roll out.</h3>
+            <p>Admins are walked through field mappings, statuses, company details, currencies, quote items, clients, features, email, and access — no manual config files.</p>
           </article>
           <article class="tour-shot">
             <span>Jira issue panel</span>
-            <h3>Keep quote context beside delivery work.</h3>
-            <p>Linked quotes stay visible from the Jira issue that created or receives the work.</p>
+            <h3>Quote context, right beside the work.</h3>
+            <p>Linked quotes stay visible from the Jira issue that created or receives the work, so scope and price never drift apart.</p>
           </article>
           <article class="tour-shot">
             <span>Saved quotes</span>
-            <h3>Find quote records quickly.</h3>
-            <p>Filter by status, system, created date, and search text from the project RevFlow page.</p>
+            <h3>Find any quote in seconds.</h3>
+            <p>Filter by status, system, created date, and free-text search from the project RevFlow page.</p>
           </article>
           <article class="tour-shot">
             <span>Revenue reports</span>
-            <h3>See WIP, order, and invoiceable value.</h3>
-            <p>Use quote funnel, value over time, top clients, systems, revenue streams, and completion-month reporting.</p>
+            <h3>WIP, order, and invoiceable at a glance.</h3>
+            <p>Quote funnel, value over time, top clients, top systems, revenue streams, and completion-month reporting — built in.</p>
           </article>
           <article class="tour-shot">
             <span>Coverage checks</span>
-            <h3>Find sprint work with no linked quote.</h3>
-            <p>Review missing quote coverage for current and next sprint work using your configured issue types.</p>
+            <h3>Spot the work no one quoted.</h3>
+            <p>See current and next-sprint work with no linked quote, scoped to the issue types you care about.</p>
           </article>
           <article class="tour-shot">
             <span>Jira theme support</span>
-            <h3>Works with Jira dark mode.</h3>
-            <p>RevFlow enables Atlassian theme support and includes dark-mode styling for forms, tables, status pills, reports, and wizard screens.</p>
+            <h3>Looks right in dark mode.</h3>
+            <p>RevFlow follows Atlassian theme support with dedicated dark-mode styling across forms, tables, status pills, reports, and wizard screens.</p>
           </article>
         </div>
       </section>
@@ -247,7 +294,7 @@
       <section class="visual-band" aria-labelledby="visual-title">
         <div class="section-heading">
           <p class="section-kicker">Product visuals</p>
-          <h2 id="visual-title">See the admin setup, reporting, and theme support buyers will ask about.</h2>
+          <h2 id="visual-title">The setup, reporting, and theme support buyers ask to see.</h2>
         </div>
         <div class="visual-grid">
           <article class="visual-card">
@@ -257,9 +304,9 @@
             >
             <h3>Guided setup wizard</h3>
             <p>
-              First-run setup helps admins map RevFlow to Jira fields, statuses,
-              work buckets, currencies, features, email providers, and access
-              permissions before wider rollout.
+              First-run setup maps RevFlow to your Jira fields, statuses, work
+              buckets, currencies, features, email providers, and access
+              permissions — before a single quote goes out.
             </p>
           </article>
           <article class="visual-card">
@@ -269,9 +316,9 @@
             >
             <h3>Revenue reports</h3>
             <p>
-              Reports bring quote funnel, WIP, invoiceable value, completion
-              month, top clients, top systems, revenue streams, and missing
-              quote coverage into the Jira project view.
+              Quote funnel, WIP, invoiceable value, completion month, top
+              clients, top systems, revenue streams, and missing coverage — all
+              in the Jira project view, no export required.
             </p>
           </article>
           <article class="visual-card">
@@ -281,9 +328,9 @@
             >
             <h3>Jira dark mode compatibility</h3>
             <p>
-              RevFlow enables Atlassian theme support and includes dark-mode
-              styling for its panels, forms, tables, reports, status pills, and
-              setup screens.
+              RevFlow follows Atlassian theme support with dark-mode styling for
+              its panels, forms, tables, reports, status pills, and setup
+              screens — so it feels native, not bolted on.
             </p>
           </article>
         </div>
@@ -291,25 +338,25 @@
 
       <section class="use-case-band" id="use-cases" aria-labelledby="use-cases-title">
         <div class="section-heading">
-          <p class="section-kicker">Who it is for</p>
-          <h2 id="use-cases-title">For teams that need delivery revenue visible before the invoice stage.</h2>
+          <p class="section-kicker">Who it's for</p>
+          <h2 id="use-cases-title">Built for teams that need to see the money before the invoice.</h2>
         </div>
         <div class="use-case-grid">
           <article>
             <h3>Digital agencies</h3>
-            <p>Quote new scope, change requests, and retained work from the Jira tickets delivery teams already manage.</p>
+            <p>Quote new scope, change requests, and retained work straight from the Jira tickets your delivery team already runs.</p>
           </article>
           <article>
-            <h3>MSPs and IT service teams</h3>
-            <p>Control recurring quote drafts, one-off client requests, systems, PO references, and forecast dates from Jira.</p>
+            <h3>MSPs &amp; IT service teams</h3>
+            <p>Keep recurring drafts, one-off requests, systems, PO references, and forecast dates in one Jira workflow.</p>
           </article>
           <article>
             <h3>Delivery managers</h3>
-            <p>See accepted, WIP, invoiceable, closed, and missing-coverage signals without waiting for finance spreadsheets.</p>
+            <p>See accepted, WIP, invoiceable, closed, and missing-coverage signals without waiting on a finance spreadsheet.</p>
           </article>
           <article>
             <h3>Jira admins</h3>
-            <p>Roll out a configurable Forge app with project-level setup, permission modes, import/export setup, and no separate CPQ platform.</p>
+            <p>Roll out a configurable Forge app with project-level setup, permission modes, and import/export — no separate CPQ platform.</p>
           </article>
         </div>
         <a class="text-link" href="use-cases.html">Explore use cases</a>
@@ -318,7 +365,7 @@
       <section class="output-band" id="sample-output" aria-labelledby="output-title">
         <div class="section-heading">
           <p class="section-kicker">Outputs</p>
-          <h2 id="output-title">Keep the client quote, Jira scope, and revenue reporting in sync.</h2>
+          <h2 id="output-title">The client quote, the Jira scope, and the reporting stay in sync.</h2>
         </div>
         <div class="output-grid">
           <article class="sample-pdf" aria-label="Sample quote PDF structure">
@@ -349,15 +396,15 @@
           <article class="sample-email" aria-label="RevFlow output and export summary">
             <span class="mail-label">Revenue record</span>
             <h3>Q2600042: Website support retainer</h3>
-            <p>Quote output can stay useful after the PDF is sent.</p>
+            <p>A quote that keeps working long after the PDF is sent.</p>
             <ul class="plain-list">
-              <li>Linked issue keys keep delivery scope attached.</li>
-              <li>Forecast completion, PO, client, system, and revenue stream fields support reporting.</li>
-              <li>Billing exports can include configurable columns for finance handoff.</li>
+              <li>Linked issue keys keep the delivery scope attached.</li>
+              <li>Forecast completion, PO, client, system, and revenue-stream fields feed every report.</li>
+              <li>Billing exports carry the exact columns your finance system expects.</li>
             </ul>
             <p class="small-note">
-              PDF generation works without email sending. Email sending is
-              optional and depends on configured Mailgun or SendGrid settings.
+              PDF generation works with no email setup at all. Sending is optional
+              and runs through your own Mailgun or SendGrid configuration.
             </p>
           </article>
         </div>
@@ -365,16 +412,16 @@
 
       <section class="comparison-band" aria-labelledby="comparison-title">
         <div class="section-heading">
-          <p class="section-kicker">Positioning</p>
-          <h2 id="comparison-title">Why use RevFlow instead of a disconnected quoting workaround?</h2>
+          <p class="section-kicker">Why RevFlow</p>
+          <h2 id="comparison-title">Everything the workarounds can't do.</h2>
         </div>
         <div class="table-wrap">
           <table class="comparison-table">
             <thead>
               <tr>
-                <th>Alternative</th>
-                <th>Common problem</th>
-                <th>RevFlow positioning</th>
+                <th>The workaround</th>
+                <th>Where it breaks</th>
+                <th>What RevFlow does instead</th>
               </tr>
             </thead>
             <tbody>
@@ -386,22 +433,22 @@
               <tr>
                 <td>Generic CPQ</td>
                 <td>Too heavy for delivery teams that live in Jira.</td>
-                <td>Focused quote-to-delivery controls inside Jira Cloud views.</td>
+                <td>Focused quote-to-delivery control, right inside Jira Cloud.</td>
               </tr>
               <tr>
                 <td>Manual PDFs</td>
-                <td>Version, status, and sent records are hard to track.</td>
-                <td>PDFs sit beside quote status, quote history, linked work, and reporting data.</td>
+                <td>Versions, statuses, and sent records are impossible to track.</td>
+                <td>PDFs sit beside quote status, history, linked work, and reporting.</td>
               </tr>
               <tr>
                 <td>Finance-only reporting</td>
-                <td>Teams find revenue gaps after the work has happened.</td>
-                <td>Missing quote coverage and WIP reporting surface risk while work is still in Jira.</td>
+                <td>Revenue gaps surface after the work is already done.</td>
+                <td>Missing-coverage and WIP reporting flag risk while it's still in Jira.</td>
               </tr>
               <tr>
                 <td>Separate quoting tools</td>
                 <td>Commercial context leaves the delivery workflow.</td>
-                <td>RevFlow runs from Jira project and issue views with configurable project setup.</td>
+                <td>RevFlow runs from Jira project and issue views, configured to your setup.</td>
               </tr>
             </tbody>
           </table>
@@ -410,35 +457,35 @@
 
       <section class="roi-band" aria-labelledby="roi-title">
         <div>
-          <p class="section-kicker">ROI</p>
-          <h2 id="roi-title">What does disconnected quote control cost your team?</h2>
+          <p class="section-kicker">The cost of doing nothing</p>
+          <h2 id="roi-title">What is disconnected quoting quietly costing you?</h2>
         </div>
         <p>
-          If a team creates 40 quote records per month and spends 20 minutes on
-          each one chasing scope, checking status, rebuilding PDFs, and
-          reconciling finance exports, that is over 13 hours per month of admin.
-          RevFlow is designed to reduce those handoffs by keeping the commercial
-          workflow in Jira.
+          Say your team handles 40 quotes a month and burns 20 minutes on each
+          one — chasing scope, checking status, rebuilding PDFs, reconciling
+          finance exports. That's over 13 hours a month lost to admin, every
+          month. RevFlow is built to give those hours back by keeping the whole
+          commercial workflow inside Jira.
         </p>
       </section>
 
       <section class="trust-band" aria-labelledby="trust-title">
         <div class="section-heading">
-          <p class="section-kicker">Admin confidence</p>
-          <h2 id="trust-title">Clear setup, permissions, data flow, and support information before install.</h2>
+          <p class="section-kicker">Buy with confidence</p>
+          <h2 id="trust-title">Setup, permissions, data flow, and support — all clear before you install.</h2>
         </div>
         <div class="link-cards">
           <a href="security.html">
-            <span>Security & Trust</span>
-            Review Forge storage, Jira scopes, optional email provider egress, app permissions, and support contacts.
+            <span>Security &amp; Trust</span>
+            See exactly what RevFlow stores, which Jira scopes it uses, where optional email data flows, and how to reach us.
           </a>
           <a href="docs.html">
             <span>Documentation</span>
-            Read setup wizard, field mapping, reports, PDF, email, recurring quote, permissions, and troubleshooting guides.
+            Setup wizard, field mapping, reports, PDFs, email, recurring quotes, permissions, and troubleshooting — in one wiki.
           </a>
           <a href="privacy-policy.html">
             <span>Privacy policy</span>
-            See what app and website information may be processed by RevFlow and Quotaurus.
+            Understand what RevFlow and Quotaurus process, and how it's handled.
           </a>
         </div>
       </section>
@@ -446,69 +493,69 @@
       <section class="faq-section" aria-labelledby="faq-title">
         <div class="section-heading">
           <p class="section-kicker">FAQ</p>
-          <h2 id="faq-title">Answers before a Jira admin installs RevFlow.</h2>
+          <h2 id="faq-title">Answers before you install.</h2>
         </div>
         <div class="faq-grid">
           <article>
-            <h3>Is the company still Quotaurus?</h3>
-            <p>Yes. Quotaurus is the company. RevFlow is the Jira Cloud app.</p>
+            <h3>Who is behind RevFlow?</h3>
+            <p>Quotaurus. RevFlow for Jira is our first product, with more revenue tools for Atlassian teams on the way.</p>
           </article>
           <article>
-            <h3>Is RevFlow for Jira Cloud only?</h3>
-            <p>Yes. RevFlow is built as an Atlassian Forge app for Jira Cloud project and issue views.</p>
+            <h3>Is there a free version?</h3>
+            <p>Yes — RevFlow is free for up to 10 users, with a 30-day trial on paid tiers. Billing runs through the Atlassian Marketplace.</p>
           </article>
           <article>
-            <h3>Does RevFlow have a setup wizard?</h3>
-            <p>Yes. Project admins can complete a first-run setup wizard and relaunch it later from settings.</p>
+            <h3>Is RevFlow Jira Cloud only?</h3>
+            <p>Yes. RevFlow is a native Atlassian Forge app for Jira Cloud project and issue views.</p>
+          </article>
+          <article>
+            <h3>Is there a setup wizard?</h3>
+            <p>Yes. Project admins run a first-run wizard and can relaunch it any time from settings.</p>
           </article>
           <article>
             <h3>Does RevFlow support Jira dark mode?</h3>
-            <p>Yes. RevFlow enables Jira theme support and includes dedicated dark-mode styling.</p>
+            <p>Yes. It follows Jira theme support with dedicated dark-mode styling throughout.</p>
           </article>
           <article>
-            <h3>Can one quote link to multiple Jira issues?</h3>
-            <p>Yes. Open quotes can be linked to Jira issues and referenced from issue panels.</p>
+            <h3>Can one quote cover multiple Jira issues?</h3>
+            <p>Yes. Open quotes link to as many Jira issues as the work needs, and show from each issue panel.</p>
           </article>
           <article>
-            <h3>Can I generate a PDF without sending an email?</h3>
-            <p>Yes. PDF generation is separate from optional Mailgun or SendGrid email sending.</p>
+            <h3>Can I create a PDF without sending email?</h3>
+            <p>Absolutely. PDF generation is fully independent of optional Mailgun or SendGrid sending.</p>
           </article>
           <article>
-            <h3>Does RevFlow support VAT and multiple currencies?</h3>
-            <p>The configuration supports VAT settings and GBP, USD, and EUR currency options.</p>
+            <h3>Does it handle VAT and multiple currencies?</h3>
+            <p>Yes — configurable VAT settings plus GBP, USD, and EUR currency options.</p>
           </article>
           <article>
-            <h3>Can I create recurring monthly quotes?</h3>
-            <p>Yes. Recurring templates can generate monthly draft quotes on a selected billing day.</p>
-          </article>
-          <article>
-            <h3>Can setup be exported?</h3>
-            <p>Yes. RevFlow includes setup import and export for configuration review and rollout.</p>
+            <h3>Can I reuse my setup across projects?</h3>
+            <p>Yes. RevFlow exports and imports setup as JSON for review and repeat rollout.</p>
           </article>
         </div>
       </section>
 
       <section class="marketplace-band final-cta" aria-labelledby="marketplace-title">
         <div>
-          <p class="section-kicker">Next step</p>
-          <h2 id="marketplace-title">Bring quote-to-delivery revenue control into Jira Cloud.</h2>
+          <p class="section-kicker">Get started</p>
+          <h2 id="marketplace-title">Bring revenue control into Jira today.</h2>
           <p>
-            Review pricing and Marketplace access, read the setup guide, or
-            contact Quotaurus before rollout.
+            Install RevFlow free from the Atlassian Marketplace, follow the setup
+            guide, or ask us anything before you roll out.
           </p>
         </div>
         <div class="link-cards">
-          <a href="pricing.html#marketplace-access">
-            <span>Marketplace access</span>
-            Get the current install and pricing route for Jira Cloud.
+          <a href="https://marketplace.atlassian.com/apps/2187659327/revflow-for-jira" target="_blank" rel="noopener">
+            <span>Try RevFlow free</span>
+            Install from the Atlassian Marketplace — free for up to 10 users.
           </a>
           <a href="docs.html#setup-wizard">
             <span>Setup guide</span>
-            See the first-run wizard and configuration steps.
+            Walk through the first-run wizard and configuration steps.
           </a>
           <a href="contact.html">
             <span>Ask a question</span>
-            Contact Quotaurus about fit, rollout, support, or Marketplace details.
+            Talk to Quotaurus about fit, rollout, or Marketplace details.
           </a>
         </div>
       </section>
@@ -517,10 +564,11 @@
     <footer class="site-footer">
       <div>
         <span class="footer-brand">Quotaurus</span>
-        <p>RevFlow: quote-to-delivery revenue control for Jira.</p>
+        <p>Commercial-control software for teams that run on Jira.</p>
+        <p>RevFlow for Jira — live on the Atlassian Marketplace.</p>
       </div>
       <nav aria-label="Footer navigation">
-        <a href="pricing.html">Marketplace</a>
+        <a href="https://marketplace.atlassian.com/apps/2187659327/revflow-for-jira" target="_blank" rel="noopener">Marketplace</a>
         <a href="docs.html">Docs</a>
         <a href="security.html">Security</a>
         <a href="support.html">Support</a>
