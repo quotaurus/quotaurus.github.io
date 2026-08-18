@@ -25,10 +25,19 @@
       50% { opacity: 1; }
     }
 
-    .status-pill { animation: status-breathe 3.8s ease-in-out infinite; transform-origin: center; }
-    .data-line { animation: line-glow 4.2s ease-in-out infinite; }
-    .data-line:nth-of-type(2) { animation-delay: 0.45s; }
-    .data-line:nth-of-type(3) { animation-delay: 0.9s; }
+    .status-pill {
+      animation: status-breathe 3.8s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .data-line {
+      animation: line-glow 4.2s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: left center;
+    }
+
+    .delay-1 { animation-delay: 0.45s; }
 
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; }
@@ -72,5 +81,5 @@
 
   <rect x="616" y="426" width="194" height="1" fill="#5e908b"/>
   <rect class="data-line" x="616" y="452" width="160" height="18" rx="6" fill="#dbe6e2" opacity="0.84"/>
-  <rect class="data-line" x="616" y="486" width="118" height="18" rx="6" fill="#dbe6e2" opacity="0.64"/>
+  <rect class="data-line delay-1" x="616" y="486" width="118" height="18" rx="6" fill="#dbe6e2" opacity="0.64"/>
 </svg>
