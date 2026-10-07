@@ -9,8 +9,9 @@ Quotaurus is the company. Current public product pages cover:
 - Muckr, the iOS household task app with the strapline "Share the chores. Split
   the reward."
 
-The homepage is based on current Forge app behaviour and is written as a public
-sales site for Jira Marketplace visitors:
+`index.html` is the Quotaurus organisation/product-family page. `revflow.html`
+is the public RevFlow sales page for Jira Marketplace visitors and is based on
+current Forge app behaviour:
 
 - Jira project page and issue panel named RevFlow
 - First-run setup wizard and setup banner for project admins
@@ -60,14 +61,15 @@ Set up or confirm these email addresses:
 - `support@quotaurus.com`
 - `privacy@quotaurus.com`
 
-Review the privacy and cookie policy wording before using the site for a public
-Marketplace listing. The current copy is conservative and assumes the public
-website sets no tracking cookies.
+Review the privacy and cookie policy wording before using the site for public
+Marketplace or App Store links. The current copy is conservative and assumes the
+public website sets no tracking cookies.
 The public RevFlow CTA links directly to the live Atlassian Marketplace listing.
 
 ## Site Pages
 
-- `index.html` - RevFlow product homepage
+- `index.html` - Quotaurus organisation and product-family homepage
+- `revflow.html` - RevFlow product homepage
 - `muckr.html` - Muckr iOS app product page
 - `use-cases.html` - buyer use cases
 - `pricing.html` - Marketplace access and pricing explainer
@@ -75,13 +77,16 @@ The public RevFlow CTA links directly to the live Atlassian Marketplace listing.
 - `security.html` - Security & Trust information
 - `support.html` - support and severity guide
 - `contact.html` - contact routes
-- `privacy-policy.html` and `cookie-policy.html`
+- `privacy-policy.html` - privacy centre
+- `revflow-privacy.html` - RevFlow privacy policy
+- `muckr-privacy.html` - Muckr privacy policy
+- `cookie-policy.html` - website cookie policy
 
 ## GitHub Pages
 
 The `CNAME` file contains `quotaurus.com` for GitHub Pages custom-domain
 publishing.
 
-The domain currently points at Squarespace. Replace only website records when
-the new GitHub Pages site is ready. Do not delete MX, TXT, SPF, DKIM, or DMARC
-records if email is in use.
+The site is published from this repository through GitHub Pages. Keep email DNS
+records such as MX, TXT, SPF, DKIM, or DMARC separate from website hosting
+changes.
