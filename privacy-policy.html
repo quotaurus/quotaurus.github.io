@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Privacy policy for RevFlow, the Jira Cloud app from Quotaurus for quote-to-delivery revenue control."
+      content="Privacy policy for Quotaurus, RevFlow for Jira, Muckr for iOS, and the public Quotaurus website."
     >
-    <title>Privacy Policy | RevFlow by Quotaurus</title>
+    <title>Privacy Policy | Quotaurus</title>
     <link rel="icon" href="assets/quotaurus-logo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <script src="animations.js" defer></script>
@@ -25,27 +25,29 @@
         <a href="docs.html">Docs</a>
         <a href="security.html">Security</a>
         <a href="support.html">Support</a>
+        <a href="muckr.html">Muckr</a>
         <a aria-current="page" href="privacy-policy.html">Privacy</a>
-        <a class="nav-cta" href="https://marketplace.atlassian.com/apps/2187659327/revflow-for-jira" target="_blank" rel="noopener">Try free</a>
+        <a class="nav-cta" href="https://marketplace.atlassian.com/apps/2187659327/revflow-for-jira" target="_blank" rel="noopener">Try RevFlow free</a>
       </nav>
     </header>
 
     <main>
       <section class="page-hero" aria-labelledby="privacy-title">
         <p class="eyebrow">Privacy policy</p>
-        <h1 id="privacy-title">How Quotaurus handles RevFlow information.</h1>
+        <h1 id="privacy-title">How Quotaurus handles product information.</h1>
         <p>
-          This policy covers the public Quotaurus website and RevFlow, the Jira
-          Cloud app from Quotaurus. Last updated: 17 August 2026.
+          This policy covers the public Quotaurus website, RevFlow for Jira
+          Cloud, and Muckr for iOS. Last updated: 7 October 2026.
         </p>
       </section>
 
       <article class="policy-layout">
         <h2>Who we are</h2>
         <p>
-          Quotaurus operates RevFlow for Jira Cloud and the public website at
-          <code>quotaurus.com</code>. You can contact Quotaurus about privacy
-          questions at <a href="mailto:privacy@quotaurus.com">privacy@quotaurus.com</a>.
+          Quotaurus operates the public website at <code>quotaurus.com</code>,
+          RevFlow for Jira Cloud, and Muckr for iOS. You can contact Quotaurus
+          about privacy questions at
+          <a href="mailto:privacy@quotaurus.com">privacy@quotaurus.com</a>.
         </p>
 
         <h2>Information the website collects</h2>
@@ -63,7 +65,7 @@
           website.
         </p>
 
-        <h2>Information RevFlow may process</h2>
+        <h2 id="revflow">Information RevFlow may process</h2>
         <p>
           When RevFlow is installed or used inside Jira, the app may process
           information needed to provide quote-to-delivery revenue control,
@@ -85,12 +87,44 @@
           issue-derived notes in quote content.
         </p>
 
+        <h2 id="muckr">Information Muckr may process</h2>
+        <p>
+          When Muckr is installed or used, the app may process information
+          needed to provide household task sharing, rewards, and Pay Day
+          workflows, including:
+        </p>
+        <ul>
+          <li>Supabase authentication identifiers, email addresses, and Sign in with Apple identifiers where Apple sign-in is used.</li>
+          <li>Household names, invite codes, household settings, pay day settings, reward modes, currencies, rates, custom reward units, plan status, and household membership limits.</li>
+          <li>Member display names, roles, status, avatar URLs, optional payment links, and household membership records.</li>
+          <li>Task titles, descriptions, checklists, estimated minutes, due dates, recurrence settings, assignees, statuses, created-by records, and Stored Task templates.</li>
+          <li>Task ratings, stars, reward multipliers, settled task status, household stats, and Pay Day ledger information.</li>
+          <li>Photos or videos users choose to upload as task guides, plus profile photos users choose to upload as avatars.</li>
+          <li>Expo push tokens and notification metadata used to send task notifications, where notification permission is granted.</li>
+          <li>App Store subscription entitlement status for Muckr Premium. Payment card details are handled by Apple, not by Quotaurus.</li>
+          <li>Support messages, diagnostic details, and screenshots you send to Quotaurus.</li>
+        </ul>
+        <p>
+          Muckr asks for photo library access only when a user chooses to add a
+          task guide or profile photo. Muckr asks for notification permission
+          before registering a device for push notifications. Auth sessions are
+          stored on the device using secure device storage.
+        </p>
+        <p>
+          Muckr media files are stored in Supabase Storage. The current app uses
+          public media URLs for uploaded task media and avatars, so users should
+          avoid uploading sensitive images or videos that are not needed for
+          household task coordination.
+        </p>
+
         <h2>How information is used</h2>
         <p>Quotaurus uses information to:</p>
         <ul>
-          <li>Provide, maintain, and improve RevFlow.</li>
+          <li>Provide, maintain, and improve Quotaurus products.</li>
           <li>Create, link, report on, export, and manage quote records inside Jira.</li>
           <li>Generate quote PDFs and, when configured, send quote emails through Mailgun or SendGrid.</li>
+          <li>Create households, manage members, plan tasks, attach guides, calculate rewards, send notifications, and support Pay Day workflows in Muckr.</li>
+          <li>Manage Muckr Premium entitlement status and restore purchases through the App Store.</li>
           <li>Respond to support, security, and privacy requests.</li>
           <li>Troubleshoot bugs and investigate reliability issues.</li>
           <li>Meet legal, security, and abuse-prevention obligations.</li>
@@ -114,14 +148,32 @@
           details, email content, and quote PDF attachments are sent to the
           configured Mailgun or SendGrid service for delivery.
         </p>
+        <p>
+          Muckr uses Supabase for authentication, database storage, file storage,
+          and backend functions. Muckr may use Expo's push notification service
+          to send task notifications to registered devices. Apple processes Sign
+          in with Apple and App Store subscription purchases according to
+          Apple's own terms and privacy policies.
+        </p>
 
         <h2>Retention</h2>
         <p>
           RevFlow data remains in Forge app storage until users delete it, the
           app is uninstalled, or a retention or deletion process is requested
-          and completed. Quotaurus keeps support information only for as long as
-          needed to provide support, comply with legal obligations, resolve
-          disputes, and maintain security.
+          and completed.
+        </p>
+        <p>
+          Muckr household data remains in Supabase until it is deleted in the
+          app, an account is deleted, or a deletion request is completed. Muckr
+          includes an account deletion action in settings. If a user is the only
+          active Task Master for a household with other active members, Muckr may
+          require the user to hand over or resolve that household first so other
+          members' data is not deleted unexpectedly.
+        </p>
+        <p>
+          Quotaurus keeps support information only for as long as needed to
+          provide support, comply with legal obligations, resolve disputes, and
+          maintain security.
         </p>
 
         <h2>Your choices and rights</h2>
@@ -135,15 +187,21 @@
         <h2>Security</h2>
         <p>
           Quotaurus uses reasonable technical and organisational measures to
-          protect information. No internet service can be guaranteed to be
-          completely secure, so please avoid sending unnecessary sensitive
-          information in support emails.
+          protect information. RevFlow uses Atlassian Forge storage and Jira
+          permission controls. Muckr uses Supabase access rules, household-scoped
+          database policies, HTTPS, and secure device storage for auth sessions.
+          No internet service can be guaranteed to be completely secure, so
+          please avoid sending unnecessary sensitive information in support
+          emails.
         </p>
 
         <h2>Children</h2>
         <p>
-          RevFlow and Quotaurus products are intended for business and
-          professional use and are not directed at children.
+          RevFlow is intended for business and professional use. Muckr is a
+          household app and may be used by families. Household organisers are
+          responsible for deciding who to invite, supervising younger users where
+          appropriate, and avoiding unnecessary sensitive information in task
+          names, notes, photos, or videos.
         </p>
 
         <h2>Changes to this policy</h2>
@@ -158,11 +216,12 @@
     <footer class="site-footer">
       <div>
         <span class="footer-brand">Quotaurus</span>
-        <p>Commercial-control software for teams that run on Jira.</p>
-        <p>RevFlow for Jira — live on the Atlassian Marketplace.</p>
+        <p>Focused software for quote control at work and shared tasks at home.</p>
+        <p>RevFlow for Jira and Muckr for iOS.</p>
       </div>
       <nav aria-label="Footer navigation">
         <a href="https://marketplace.atlassian.com/apps/2187659327/revflow-for-jira" target="_blank" rel="noopener">Marketplace</a>
+        <a href="muckr.html">Muckr</a>
         <a href="docs.html">Docs</a>
         <a href="security.html">Security</a>
         <a href="support.html">Support</a>
@@ -171,8 +230,9 @@
         <a href="cookie-policy.html">Cookies</a>
       </nav>
       <p class="trademark-note">
-        Jira and Atlassian are trademarks of Atlassian. Quotaurus is not
-        affiliated with Atlassian.
+        Jira and Atlassian are trademarks of Atlassian. Apple, App Store, and
+        iOS are trademarks of Apple Inc. Quotaurus is not affiliated with
+        Atlassian or Apple.
       </p>
     </footer>
   </body>

@@ -8,6 +8,7 @@
   const selectors = [
     ".intro-band",
     ".section-heading",
+    ".product-item",
     ".feature-card",
     ".tour-shot",
     ".visual-card",

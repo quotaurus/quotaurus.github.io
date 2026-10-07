@@ -2,8 +2,12 @@
 
 Static product website for `quotaurus.com`.
 
-Quotaurus is the company. RevFlow is the Jira Cloud app, with the strapline
-"Quote-to-delivery revenue control for Jira".
+Quotaurus is the company. Current public product pages cover:
+
+- RevFlow, the Jira Cloud app with the strapline "Quote-to-delivery revenue
+  control for Jira"
+- Muckr, the iOS household task app with the strapline "Share the chores. Split
+  the reward."
 
 The homepage is based on current Forge app behaviour and is written as a public
 sales site for Jira Marketplace visitors:
@@ -26,6 +30,18 @@ sales site for Jira Marketplace visitors:
 - Setup import/export
 - Jira dark mode compatibility
 
+The Muckr page is based on the current Expo/Supabase app behaviour:
+
+- Email-code sign-in and Sign in with Apple on iOS
+- Household creation and invite-code joining
+- Task Master and Helper roles
+- Weekly task planning, Stored Tasks, and recurring tasks
+- Task descriptions, checklists, photo guides, and video guides
+- Claiming, marking done, rating, Pay Day settlement, and payment-link handoff
+- Money, custom reward-unit, and "just tasks" household modes
+- Muckr Premium via App Store subscriptions
+- Account deletion from the app
+
 ## Local Preview
 
 Open `index.html` in a browser, or run a tiny local server:
@@ -47,15 +63,12 @@ Set up or confirm these email addresses:
 Review the privacy and cookie policy wording before using the site for a public
 Marketplace listing. The current copy is conservative and assumes the public
 website sets no tracking cookies.
-
-The public CTA currently links to the local Marketplace access page because a
-direct public Atlassian Marketplace listing URL is not published in this repo.
-Replace those links with the direct Marketplace listing URL once the app listing
-is available.
+The public RevFlow CTA links directly to the live Atlassian Marketplace listing.
 
 ## Site Pages
 
 - `index.html` - RevFlow product homepage
+- `muckr.html` - Muckr iOS app product page
 - `use-cases.html` - buyer use cases
 - `pricing.html` - Marketplace access and pricing explainer
 - `docs.html` - setup and workflow documentation

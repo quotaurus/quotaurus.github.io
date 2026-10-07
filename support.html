@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Support for RevFlow, the Jira Cloud app from Quotaurus for quote-to-delivery revenue control."
+      content="Support for Quotaurus products, including RevFlow for Jira and Muckr for iOS."
     >
-    <title>Support | RevFlow by Quotaurus</title>
+    <title>Support | Quotaurus</title>
     <link rel="icon" href="assets/quotaurus-logo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <script src="animations.js" defer></script>
@@ -25,18 +25,19 @@
         <a href="docs.html">Docs</a>
         <a href="security.html">Security</a>
         <a aria-current="page" href="support.html">Support</a>
-        <a class="nav-cta" href="https://marketplace.atlassian.com/apps/2187659327/revflow-for-jira" target="_blank" rel="noopener">Try free</a>
+        <a href="muckr.html">Muckr</a>
+        <a class="nav-cta" href="https://marketplace.atlassian.com/apps/2187659327/revflow-for-jira" target="_blank" rel="noopener">Try RevFlow free</a>
       </nav>
     </header>
 
     <main>
       <section class="page-hero" aria-labelledby="support-title">
         <p class="eyebrow">Support</p>
-        <h1 id="support-title">Real help, from the people who built RevFlow.</h1>
+        <h1 id="support-title">Real help, from the people who built the product.</h1>
         <p>
-          Installation, setup wizard, quote workflow, reporting, optional email
-          sending, bug reports, data requests — whatever you need, you'll reach
-          the team that knows the app inside out.
+          RevFlow setup, Muckr sign-in, app questions, bug reports, data
+          requests, security reports — whatever you need, you will reach the
+          team behind the product.
         </p>
       </section>
 
@@ -48,18 +49,39 @@
             hours. For urgent production-impacting issues, put "Urgent" in the
             subject line and describe the business impact clearly.
           </p>
-          <a class="button dark" href="mailto:support@quotaurus.com?subject=RevFlow%20support">
+          <a class="button dark" href="mailto:support@quotaurus.com?subject=Quotaurus%20support">
             Email support
           </a>
+        </article>
+
+        <article class="support-card">
+          <h2>RevFlow support</h2>
+          <ul class="plain-list">
+            <li>Marketplace installation and access questions.</li>
+            <li>Setup wizard and configuration questions.</li>
+            <li>Quote, PDF, report, recurring template, billing export, or email-provider workflow questions.</li>
+            <li>Unexpected Jira app behaviour or defects.</li>
+          </ul>
+        </article>
+
+        <article class="support-card">
+          <h2>Muckr support</h2>
+          <ul class="plain-list">
+            <li>Email code sign-in or Sign in with Apple questions.</li>
+            <li>Household creation, invite codes, member roles, and Pay Day setup.</li>
+            <li>Task planning, media guides, ratings, rewards, or Premium questions.</li>
+            <li>Account deletion, privacy, or household data questions.</li>
+          </ul>
         </article>
 
         <article class="support-card">
           <h2>Include these details</h2>
           <ul class="plain-list">
             <li>App name and, if visible, app version.</li>
-            <li>Your Atlassian site URL, such as <code>example.atlassian.net</code>.</li>
-            <li>The Jira project, issue, quote reference, or report view where the problem happened.</li>
-            <li>Whether the issue affects setup, quote editing, PDF generation, email sending, reports, recurring quotes, billing exports, or dark mode.</li>
+            <li>For RevFlow: your Atlassian site URL, such as <code>example.atlassian.net</code>.</li>
+            <li>For Muckr: your device model, iOS version, and whether you signed in with email or Apple.</li>
+            <li>The project, issue, quote reference, household, task, Pay Day screen, or settings screen where the problem happened.</li>
+            <li>Whether the issue affects setup, sign-in, quote editing, PDF generation, email sending, reports, tasks, media, recurring work, Premium, billing exports, or dark mode.</li>
             <li>Steps to reproduce the issue.</li>
             <li>Any visible error message, timestamp, or screenshot.</li>
           </ul>
@@ -68,10 +90,10 @@
         <article class="support-card">
           <h2>What support covers</h2>
           <ul class="plain-list">
-            <li>Marketplace installation and access questions.</li>
-            <li>Setup wizard and configuration questions.</li>
+            <li>RevFlow Marketplace installation and access questions.</li>
+            <li>RevFlow setup wizard and configuration questions.</li>
+            <li>Muckr household setup, task, reward, Pay Day, Premium, and account questions.</li>
             <li>Unexpected app behaviour or defects.</li>
-            <li>Quote, PDF, report, recurring template, billing export, or email-provider workflow questions.</li>
             <li>Privacy, deletion, and data handling requests.</li>
           </ul>
         </article>
@@ -111,17 +133,17 @@
               <tbody>
                 <tr>
                   <td>Critical</td>
-                  <td>RevFlow unavailable for all users.</td>
+                  <td>A Quotaurus product is unavailable for all users in a live workflow.</td>
                   <td>Best-effort faster initial response during UK business hours.</td>
                 </tr>
                 <tr>
                   <td>High</td>
-                  <td>Quotes cannot be created, generated as PDFs, sent, or reported for an active workflow.</td>
+                  <td>RevFlow quote workflows or Muckr sign-in, household tasks, or Pay Day workflows are blocked.</td>
                   <td>Same or next UK business day where possible.</td>
                 </tr>
                 <tr>
                   <td>Normal</td>
-                  <td>Setup, configuration, reporting, dark mode, or usage question.</td>
+                  <td>Setup, configuration, reporting, task, Premium, dark mode, or usage question.</td>
                   <td>Within two UK business days.</td>
                 </tr>
                 <tr>
@@ -134,7 +156,7 @@
           </div>
           <p>
             These targets are support goals, not a formal SLA. Include severity,
-            business impact, Atlassian site URL, and reproduction detail so the
+            business impact, relevant account or site detail, and reproduction detail so the
             issue can be triaged quickly.
           </p>
         </article>
@@ -144,11 +166,12 @@
     <footer class="site-footer">
       <div>
         <span class="footer-brand">Quotaurus</span>
-        <p>Commercial-control software for teams that run on Jira.</p>
-        <p>RevFlow for Jira — live on the Atlassian Marketplace.</p>
+        <p>Focused software for quote control at work and shared tasks at home.</p>
+        <p>RevFlow for Jira and Muckr for iOS.</p>
       </div>
       <nav aria-label="Footer navigation">
         <a href="https://marketplace.atlassian.com/apps/2187659327/revflow-for-jira" target="_blank" rel="noopener">Marketplace</a>
+        <a href="muckr.html">Muckr</a>
         <a href="docs.html">Docs</a>
         <a href="security.html">Security</a>
         <a href="support.html">Support</a>
@@ -157,8 +180,9 @@
         <a href="cookie-policy.html">Cookies</a>
       </nav>
       <p class="trademark-note">
-        Jira and Atlassian are trademarks of Atlassian. Quotaurus is not
-        affiliated with Atlassian.
+        Jira and Atlassian are trademarks of Atlassian. Apple, App Store, and
+        iOS are trademarks of Apple Inc. Quotaurus is not affiliated with
+        Atlassian or Apple.
       </p>
     </footer>
   </body>
